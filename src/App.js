@@ -1,9 +1,20 @@
 import React from 'react';
+import { createGlobalStyle } from 'styled-components';
+import Wrapper from './components/Wrapper';
+
+const GlobalStyle = createGlobalStyle`
+    body {
+        margin: 0;
+        height: 100vh;
+    }
+`;
 
 function App() {
   return (
-    <div > 14기 프론트엔드 짱 =_=
-    </div>
+    <>
+      <GlobalStyle />
+      <Wrapper />
+    </>
   );
 }
 
