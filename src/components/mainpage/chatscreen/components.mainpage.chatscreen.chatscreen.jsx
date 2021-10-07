@@ -1,27 +1,12 @@
 import React from "react";
-import styled, { css } from "styled-components";
-
-const Button = styled.button`
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
-
-  ${(props) =>
-    props.primary &&
-    css`
-      background: palevioletred;
-      color: white;
-    `};
-`;
+import "./components.mainpage.chatscreen.chatscreen.css";
+import Header from "./components.mainpage.chatscreen.header";
 
 function ChatRoom() {
   return (
-    <div>
+    <div className="main">
+      <Header />
       <div>ChatRoom</div>
-      <Button primary>Hello</Button>
     </div>
   );
 }

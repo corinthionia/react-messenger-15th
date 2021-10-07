@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  border-bottom: black 1px solid;
+}
+
+.header .profile {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+}
