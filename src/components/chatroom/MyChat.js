@@ -1,14 +1,24 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 
 const MyChat = () => {
-  const chats = [
+  /* const chats = [
     '하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이',
     '안녕',
     '헬로우',
     '안녕',
     '헬로우',
     '하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이',
-  ];
+    '안녕',
+    '클레오파트라',
+    '세상에서',
+    '제일',
+    '가는',
+    '포테이토',
+    '칩!',
+  ];  */
+
+  const [chats, setChats] = useState(['칩!']);
 
   return (
     <MyMessage>
