@@ -1,0 +1,22 @@
+.chatroom {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+}
+
+img {
+  width: 4rem;
+  border-radius: 2rem;
+}
+
+.user1 {
+  padding-left: 2rem;
+  text-align: left;
+}
+
+.user2 {
+  padding-right: 2rem;
+  text-align: right;
+}

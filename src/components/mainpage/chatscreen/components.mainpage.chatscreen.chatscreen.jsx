@@ -1,14 +1,17 @@
 import React from "react";
 import "./components.mainpage.chatscreen.chatscreen.css";
 import Header from "./components.mainpage.chatscreen.header";
+import ChatRoom from "./components.mainpage.chatscreen.chatroom";
+import Form from "./components.mainpage.chatscreen.form";
 
-function ChatRoom() {
+function ChatScreen() {
   return (
     <div className="main">
       <Header />
-      <div>ChatRoom</div>
+      <ChatRoom />
+      <Form />
     </div>
   );
 }
 
-export default ChatRoom;
+export default ChatScreen;

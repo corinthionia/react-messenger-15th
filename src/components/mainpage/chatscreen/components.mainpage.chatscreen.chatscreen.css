@@ -1,5 +1,7 @@
 .main {
-  padding-left: 3px;
-  margin-left: 60px;
-  background-color: rgb(143, 198, 232);
+  /* position: absolute; */
+  width: calc(100% - 70px);
+  height: 100%;
+  margin-left: 70px;
+  background-color: rgb(183, 216, 237);
 }
