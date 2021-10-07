@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-const MyChatRoom = () => {
+const MyChat = () => {
   const chats = [
     '하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이',
+    '안녕',
+    '헬로우',
     '안녕',
     '헬로우',
     '하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이',
@@ -19,22 +21,21 @@ const MyChatRoom = () => {
 
 const MyMessage = styled.div`
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
-
-  background: white;
 `;
 
 const Message = styled.div`
-  background: powderblue;
+  max-width: 10rem;
+  font-size: 0.75rem;
 
-  border-radius: 2rem;
+  background: cornflowerblue;
+  color: white;
+
   margin: 0.5rem;
-  padding: 1rem;
-
+  padding: 0.75rem;
   align-self: flex-end;
 
-  text-align: right;
+  border-radius: 1.5rem;
 `;
 
-export default MyChatRoom;
+export default MyChat;

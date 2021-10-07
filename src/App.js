@@ -1,11 +1,20 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import Wrapper from './components/Wrapper';
+import Wrapper from './components/chatroom/Wrapper';
 
 const GlobalStyle = createGlobalStyle`
+
+    *:focus {
+        outline: none;
+    }
+
     body {
-        margin: 0;
         height: 100vh;
+        width: 100vw;
+
+        margin: 0;
+        display: flex;
+
     }
 `;
 

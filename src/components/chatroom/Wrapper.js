@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import MyChatRoom from './MyChatRoom';
-import YourChatRoom from './YourChatRoom';
+import MessageForm from './MessageForm';
+import MyChat from './MyChat';
+import YourChat from './YourChat';
 
 const Wrapper = () => {
   return (
@@ -8,28 +9,34 @@ const Wrapper = () => {
       <Header>
         <Profile>
           <ProfileImg />
+          <TextWrapper>
+            <ProfileText>{'주현'}</ProfileText>
+            <ProfileText>입력 중...</ProfileText>
+          </TextWrapper>
         </Profile>
       </Header>
       <Chat>
-        <MyChatRoom />
-        <YourChatRoom />
+        <MyChat />
+        <YourChat />
       </Chat>
-      <Form>
-        <AddBtn>➕</AddBtn>
-        <Input />
-        <AddBtn>➕</AddBtn>
-      </Form>
+      <MessageForm />
     </EntireWrapper>
   );
 };
 
 const EntireWrapper = styled.div`
-  height: 100vh;
+  height: 50rem;
+  width: 27.5rem;
+
+  margin: 0;
+  border: 0.15rem solid #efefef;
 `;
 
 const Header = styled.header`
-  height: 12.5%;
-  background: pink;
+  height: 10%;
+  background: #efefef;
+
+  margin: 0;
 
   display: flex;
   align-items: center;
@@ -37,33 +44,44 @@ const Header = styled.header`
 `;
 
 const Profile = styled.section`
-  width: 45%;
+  width: 35%;
+  max-width: 25rem;
   height: 65%;
-  background: white;
 
   display: flex;
   align-items: center;
+
+  background: white;
 `;
 
 const ProfileImg = styled.div`
-  width: 7.5vh;
-  height: 7.5vh;
+  width: 4vh;
+  height: 4vh;
 
   border-radius: 50%;
   margin: 10%;
 
-  background: pink;
+  background: #efefef;
 
   object-fit: cover;
 `;
 
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ProfileText = styled.span`
+  font-size: 0.95rem;
+`;
+
 const Chat = styled.section`
-  height: 75%;
+  height: 80%;
 
   overflow: auto;
 
   &::-webkit-scrollbar {
-    width: 0.75rem;
+    width: 0.9rem;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -72,35 +90,6 @@ const Chat = styled.section`
 
     border-radius: 10px;
     border: 0.25rem solid transparent;
-  }
-`;
-
-const Form = styled.form`
-  height: 12.5%;
-  background: yellowgreen;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-`;
-
-const Input = styled.input`
-  height: 50%;
-  width: 65%;
-
-  border: none;
-  border-radius: 1.5rem;
-`;
-
-const AddBtn = styled.button`
-  height: 50%;
-  width: 10%;
-
-  border: none;
-  background: none;
-
-  :hover {
-    cursor: pointer;
   }
 `;
 
