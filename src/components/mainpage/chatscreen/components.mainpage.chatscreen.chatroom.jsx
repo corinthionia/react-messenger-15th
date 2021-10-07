@@ -8,51 +8,67 @@ function ChatRoom() {
     <div className="chatroom">
       <div className="user1">
         <img src={UserOne} alt="profile1" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user2">
         <img src={UserTwo} alt="profile2" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user1">
         <img src={UserOne} alt="profile1" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user2">
         <img src={UserTwo} alt="profile2" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user1">
         <img src={UserOne} alt="profile1" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user2">
         <img src={UserTwo} alt="profile2" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user1">
         <img src={UserOne} alt="profile1" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user2">
         <img src={UserTwo} alt="profile2" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user1">
         <img src={UserOne} alt="profile1" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user2">
         <img src={UserTwo} alt="profile2" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user1">
         <img src={UserOne} alt="profile1" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user2">
         <img src={UserTwo} alt="profile2" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user1">
         <img src={UserOne} alt="profile1" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user2">
         <img src={UserTwo} alt="profile2" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user1">
         <img src={UserOne} alt="profile1" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
       <div className="user2">
         <img src={UserTwo} alt="profile2" />
+        <p>안녕안녕안녕안녕안녕안녕안녕안녕</p>
       </div>
     </div>
   );
