@@ -26,7 +26,7 @@ const Header = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  border-bottom: 0.15rem solid #efefef;
+  border-bottom: 0.1rem solid #efefef;
 `;
 
 const BackBtn = styled.button`

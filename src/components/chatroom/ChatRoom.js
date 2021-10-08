@@ -4,8 +4,8 @@ import ChatHeader from './ChatHeader';
 import ChatBox from './ChatBox';
 import InputForm from './InputForm';
 
-import profile0 from '../profile/img/profile0.jpg';
-import profile1 from '../profile/img/profile1.jpg';
+import profile0 from '../users/img/profile0.jpg';
+import profile1 from '../users/img/profile1.jpg';
 
 const ChatRoom = () => {
   const users = [
@@ -23,19 +23,39 @@ const ChatRoom = () => {
     {
       date: 1633700375865,
       userId: 0,
-      text: '안녕 클레오파트라 세상에서 제일 가는 포테이토 칩!',
+      text: '우리의 색은 gray and blue 엄지손가락으로 말풍선을 띄워',
+      isDoubleClicked: false,
     },
     {
       date: 1633700378249,
       userId: 1,
-      text: '안녕 클레오파트라 세상에서 제일 가는 포테이토 칩!',
+      text: '우리의 네모 칸은 bloom 엄지 손가락으로 장미꽃을 피워',
+      isDoubleClicked: true,
+    },
+    {
+      date: 1633700378251,
+      userId: 0,
+      text: '띄어쓰기없이보낼게사랑인것같애',
+      isDoubleClicked: false,
+    },
+    {
+      date: 1633700378253,
+      userId: 0,
+      text: '백만송이장미꽃을나랑피워볼래?',
+      isDoubleClicked: false,
+    },
+    {
+      date: 1633700378252,
+      userId: 1,
+      text: '꽃잎의 색은 우리 마음 가는 대로 칠해 시들 때도 예쁘게',
+      isDoubleClicked: false,
     },
   ]);
 
   return (
     <>
       <ChatHeader changeUser={changeUser} currentUser={currentUser} />
-      <ChatBox currentUser={currentUser} chat={chat} users={users} />
+      <ChatBox chat={chat} setChat={setChat} users={users} />
       <InputForm currentUser={currentUser} chat={chat} setChat={setChat} />
     </>
   );

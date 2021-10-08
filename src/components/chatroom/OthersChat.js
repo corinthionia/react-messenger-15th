@@ -1,15 +1,29 @@
 import styled from 'styled-components';
 
-const OthersChat = ({ chat, users }) => {
+// 더블 클릭 시 하트 추가하는 기능 구현 중
+const Message = ({ chat, users, heart }) => {
   return (
-    <YourMessage>
+    <ChatWrapper>
       <ProfileImg src={users[1].img} />
-      <Message key={chat.date}>{chat.text}</Message>
-    </YourMessage>
+      <ChatText>{chat.text}</ChatText>
+      {heart}
+    </ChatWrapper>
   );
 };
 
-const YourMessage = styled.div`
+const OthersChat = ({ chat, users }) => {
+  return (
+    <>
+      {chat.isDoubleClicked ? (
+        <Message chat={chat} users={users} heart={<Heart>💗</Heart>} />
+      ) : (
+        <Message chat={chat} users={users} heart={null} />
+      )}
+    </>
+  );
+};
+
+const ChatWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,7 +39,7 @@ const ProfileImg = styled.img`
   object-fit: cover;
 `;
 
-const Message = styled.span`
+const ChatText = styled.span`
   max-width: 12.5rem;
   font-size: 0.5rem;
 
@@ -37,6 +51,12 @@ const Message = styled.span`
 
   background: #efefef;
   border-radius: 1.5rem;
+`;
+
+const Heart = styled.span`
+  font-size: 0.5rem;
+  margin: 1rem 0.25rem;
+  align-self: flex-end;
 `;
 
 export default OthersChat;

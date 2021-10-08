@@ -28,12 +28,15 @@ const Wrapper = styled.section`
 
 const LeftStatusBar = styled.span`
   font-size: 0.75rem;
-  margin: 0 0.5rem;
+  margin: 0.5rem;
+
+  display: flex;
+  justify-content: space-evenly;
 `;
 
 const RightStatusBar = styled.span`
-  width: 17%;
-  font-size: 0.85rem;
+  width: 17.5%;
+  font-size: 0.75rem;
 
   display: flex;
   justify-content: space-evenly;

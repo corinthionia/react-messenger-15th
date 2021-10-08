@@ -16,6 +16,7 @@ const InputForm = ({ currentUser, chat, setChat }) => {
         date: Date.now(),
         userId: currentUser.id,
         text: inputText,
+        isDoubleClicked: false,
       };
 
       setChat([...chat, item]);
@@ -26,7 +27,7 @@ const InputForm = ({ currentUser, chat, setChat }) => {
   };
 
   const sendSticker = () => {
-    alert('이모티콘은 준비 중입니다... ^^');
+    alert('이모티콘은 준비 중입니다... 🙄');
   };
 
   return (
@@ -47,7 +48,7 @@ const InputForm = ({ currentUser, chat, setChat }) => {
 const Form = styled.form`
   height: 10%;
 
-  border-top: 0.15rem solid #efefef;
+  border-top: 0.1rem solid #efefef;
 
   display: flex;
   align-items: center;
@@ -58,7 +59,7 @@ const Input = styled.input`
   height: 50%;
   width: 65%;
 
-  border: 0.15rem solid #efefef;
+  border: 0.1rem solid #efefef;
   border-radius: 1.5rem;
 
   padding: 0 4%;

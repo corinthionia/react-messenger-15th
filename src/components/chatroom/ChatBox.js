@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import MyChat from './MyChat';
 import OthersChat from './OthersChat';
 
-const ChatBox = ({ users, chat }) => {
+const ChatBox = ({ chat, setChat, users }) => {
   const scrollRef = useRef();
 
   useEffect(() => {
@@ -15,19 +15,24 @@ const ChatBox = ({ users, chat }) => {
   }, [chat]);
 
   return (
-    <ChatWrapper ref={scrollRef}>
+    <ChatList ref={scrollRef}>
       {chat.map((chat) =>
         chat.userId === 0 ? (
           <MyChat key={chat.date} users={users} chat={chat} />
         ) : (
-          <OthersChat key={chat.date} users={users} chat={chat} />
+          <OthersChat
+            key={chat.date}
+            users={users}
+            chat={chat}
+            setChat={setChat}
+          />
         )
       )}
-    </ChatWrapper>
+    </ChatList>
   );
 };
 
-const ChatWrapper = styled.section`
+const ChatList = styled.section`
   height: 77.5%;
 
   overflow: auto;

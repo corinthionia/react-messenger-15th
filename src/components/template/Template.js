@@ -14,7 +14,8 @@ const ChatRoomWrapper = styled.div`
   height: 50rem;
   width: 22.5rem;
 
-  border: 0.15rem solid #efefef;
+  margin: 0;
+  border: 0.1rem solid #efefef;
 `;
 
 export default Template;

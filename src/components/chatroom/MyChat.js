@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-const MyChat = ({ chat, users }) => {
+const MyChat = ({ users, chat }) => {
   return (
-    <MyMessage>
-      <Message key={chat.date}>{chat.text}</Message>
+    <ChatWrapper>
+      <ChatText>{chat.text}</ChatText>
       <ProfileImg src={users[0].img} />
-    </MyMessage>
+    </ChatWrapper>
   );
 };
 
-const MyMessage = styled.div`
+const ChatWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -27,7 +27,7 @@ const ProfileImg = styled.img`
   object-fit: cover;
 `;
 
-const Message = styled.span`
+const ChatText = styled.span`
   max-width: 12.5rem;
   font-size: 0.5rem;
 
@@ -35,11 +35,11 @@ const Message = styled.span`
   background: #6699ff;
 
   margin: 0.75rem 0.25rem;
-  padding: 0.75rem;
+  padding: 0.5rem 0.75rem;
 
   text-align: justify;
 
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
 `;
 
 export default MyChat;
