@@ -1,20 +1,20 @@
 import styled from 'styled-components';
 import { FiChevronLeft } from 'react-icons/fi';
 
-const ChatHeader = ({ changeProfile, currentUser }) => {
+const ChatHeader = ({ changeUser, currentUser }) => {
   return (
     <Header>
       <BackBtn>
         <FiChevronLeft />
       </BackBtn>
-      <ProfileWrapper onClick={changeProfile}>
+      <ProfileWrapper onClick={changeUser}>
         <ProfileImg src={currentUser.img} />
         <TextWrapper>
           <ProfileName>{currentUser.name}</ProfileName>
           <ProfileText>Typing ...</ProfileText>
         </TextWrapper>
       </ProfileWrapper>
-      <BackBtn />
+      <Blank />
     </Header>
   );
 };
@@ -44,16 +44,19 @@ const BackBtn = styled.button`
   }
 `;
 
+const Blank = styled.div`
+  width: 10%;
+  height: 50%;
+  margin: 0 1rem;
+`;
+
 const ProfileWrapper = styled.section`
-  width: 35%;
+  width: 45%;
   height: 75%;
-  max-width: 25rem;
 
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
-  border-radius: 1.25rem;
 
   :hover {
     cursor: pointer;
@@ -72,6 +75,8 @@ const ProfileImg = styled.img`
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  font-size: 0.9rem;
 `;
 
 const ProfileName = styled.span`
@@ -79,7 +84,7 @@ const ProfileName = styled.span`
 `;
 
 const ProfileText = styled.span`
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: #a1a1a1;
 `;
 

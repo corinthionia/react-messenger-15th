@@ -19,6 +19,8 @@ const InputForm = ({ currentUser, chat, setChat }) => {
       };
 
       setChat([...chat, item]);
+    } else {
+      alert('Please enter a message.');
     }
     setInputText('');
   };

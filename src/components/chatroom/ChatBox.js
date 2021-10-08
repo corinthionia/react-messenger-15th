@@ -1,21 +1,16 @@
-import { useEffect } from 'react';
 import styled from 'styled-components';
 
 import MyChat from './MyChat';
 import OthersChat from './OthersChat';
 
-const ChatBox = ({ currentUser, chat }) => {
-  useEffect(() => {
-    window.scrollBy(0, document.body.scrollHeight);
-  }, [chat]);
-
+const ChatBox = ({ users, chat }) => {
   return (
     <ChatWrapper>
       {chat.map((chat) =>
         chat.userId === 0 ? (
-          <MyChat key={chat.date} currentUser={currentUser} chat={chat} />
+          <MyChat key={chat.date} users={users} chat={chat} />
         ) : (
-          <OthersChat key={chat.date} currentUser={currentUser} chat={chat} />
+          <OthersChat key={chat.date} users={users} chat={chat} />
         )
       )}
     </ChatWrapper>
