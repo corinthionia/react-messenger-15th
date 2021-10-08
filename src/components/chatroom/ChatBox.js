@@ -9,7 +9,7 @@ const ChatBox = ({ users, chat }) => {
 
   useEffect(() => {
     scrollRef.current.scrollBy({
-      top: 100,
+      top: 1000,
       behavior: 'smooth',
     });
   }, [chat]);
