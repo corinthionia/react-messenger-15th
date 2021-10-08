@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-const MessageForm = ({ chats, setChats }) => {
+const InputForm = ({ currentUser, chat, setChat }) => {
   const [inputText, setInputText] = useState('');
 
   const handleInputChange = (e) => {
@@ -11,27 +11,31 @@ const MessageForm = ({ chats, setChats }) => {
   const addNewMsg = (e) => {
     e.preventDefault();
 
-    if (inputText === '') {
-      alert('Please enter a message.');
-    } else {
-      const newMsg = {
-        id: Date.now(),
+    if (inputText) {
+      const item = {
+        date: Date.now(),
+        userId: currentUser.id,
         text: inputText,
       };
 
-      setChats([...chats, newMsg]);
+      setChat([...chat, item]);
     }
+    setInputText('');
+  };
 
-    setChats('');
+  const sendSticker = () => {
+    alert('이모티콘은 준비 중입니다... ^^');
   };
 
   return (
     <Form>
-      <AddBtn>😀</AddBtn>
+      <AddBtn type="button" onClick={sendSticker}>
+        😀
+      </AddBtn>
       <Input
         value={inputText}
         onChange={handleInputChange}
-        placeholder="Please enter a message"
+        placeholder="Message..."
       />
       <AddBtn onClick={addNewMsg}>➕</AddBtn>
     </Form>
@@ -45,7 +49,7 @@ const Form = styled.form`
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `;
 
 const Input = styled.input`
@@ -70,4 +74,4 @@ const AddBtn = styled.button`
   }
 `;
 
-export default MessageForm;
+export default InputForm;

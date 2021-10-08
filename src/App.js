@@ -1,9 +1,9 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import Wrapper from './components/chatroom/Wrapper';
+import ChatRoom from './components/chatroom/ChatRoom';
+import Template from './components/template/Template';
 
 const GlobalStyle = createGlobalStyle`
-
     *:focus {
         outline: none;
     }
@@ -13,8 +13,11 @@ const GlobalStyle = createGlobalStyle`
         width: 100vw;
 
         margin: 0;
-        display: flex;
+        padding: 0;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `;
 
@@ -22,7 +25,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Wrapper />
+      <Template component={<ChatRoom />} />
     </>
   );
 }

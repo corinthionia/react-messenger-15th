@@ -1,30 +1,9 @@
 import styled from 'styled-components';
-import { useState } from 'react';
 
-const MyChat = () => {
-  /* const chats = [
-    '하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이',
-    '안녕',
-    '헬로우',
-    '안녕',
-    '헬로우',
-    '하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이',
-    '안녕',
-    '클레오파트라',
-    '세상에서',
-    '제일',
-    '가는',
-    '포테이토',
-    '칩!',
-  ];  */
-
-  const [chats, setChats] = useState(['칩!']);
-
+const MyChat = ({ chat }) => {
   return (
     <MyMessage>
-      {chats.map((chat, i) => (
-        <Message key={'my' + i}>{chat}</Message>
-      ))}
+      <Message key={chat.date}>{chat.text}</Message>
     </MyMessage>
   );
 };
@@ -34,18 +13,18 @@ const MyMessage = styled.div`
   flex-direction: column;
 `;
 
-const Message = styled.div`
+const Message = styled.span`
   max-width: 10rem;
   font-size: 0.75rem;
 
-  background: cornflowerblue;
   color: white;
+  background: #6699ff;
 
-  margin: 0.5rem;
-  padding: 0.75rem;
+  margin: 0.75rem;
+  padding: 0.5rem;
   align-self: flex-end;
 
-  border-radius: 1.5rem;
+  border-radius: 1rem;
 `;
 
 export default MyChat;
