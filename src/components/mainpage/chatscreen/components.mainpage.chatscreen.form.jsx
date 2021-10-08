@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./components.mainpage.chatscreen.form.css";
 
-function Form({ user, addChatLeft, addChatRight }) {
+function Form({ user, addChat }) {
   const [value, setValue] = useState("");
 
   const handleSubmit = (e) => {
@@ -12,11 +12,10 @@ function Form({ user, addChatLeft, addChatRight }) {
       window.alert("입력이 없습니다.");
       return;
     }
-    if (user === 0) {
-      addChatLeft(value);
-    } else {
-      addChatRight(value);
-    }
+    // window.alert("user:" + user);
+    // window.alert("value:" + value);
+    addChat(user, value);
+
     //reset value
     setValue("");
   };

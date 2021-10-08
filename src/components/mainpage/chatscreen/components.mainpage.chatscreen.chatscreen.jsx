@@ -6,24 +6,20 @@ import Form from "./components.mainpage.chatscreen.form";
 
 function ChatScreen() {
   const [user, setUser] = useState(0);
-  const [leftUserChat, changeLeftChat] = useState([]);
-  const [rightUserChat, changeRightChat] = useState([]);
+  const [UserChat, changeChat] = useState([]);
 
-  const addChatLeft = (chat) => {
-    const tempChat = [...leftUserChat, { chat }];
-    changeLeftChat(tempChat);
-  };
-
-  const addChatRight = (chat) => {
-    const tempChat = [...rightUserChat, { chat }];
-    changeRightChat(tempChat);
+  const addChat = (user, chat) => {
+    const length = UserChat.length;
+    const tempChat = [...UserChat, { user, chat, length }];
+    // window.alert(tempChat);
+    changeChat(tempChat);
   };
 
   return (
     <div className="main">
       <Header user={user} setUser={setUser} />
-      <ChatRoom leftUserChat={leftUserChat} rightUserChat={rightUserChat} />
-      <Form user={user} addChatLeft={addChatLeft} addChatRight={addChatRight} />
+      <ChatRoom UserChat={UserChat} />
+      <Form user={user} addChat={addChat} />
     </div>
   );
 }
