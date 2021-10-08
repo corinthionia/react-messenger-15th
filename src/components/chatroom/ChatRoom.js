@@ -8,6 +8,7 @@ import profile0 from '../profile/img/profile0.jpg';
 import profile1 from '../profile/img/profile1.jpg';
 
 const ChatRoom = () => {
+  // 유저 정보
   const users = [
     { id: 0, name: 'j__hy_n', img: profile0 },
     { id: 1, name: 'corinthionia', img: profile1 },
