@@ -1,11 +1,21 @@
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 import MyChat from './MyChat';
 import OthersChat from './OthersChat';
 
 const ChatBox = ({ users, chat }) => {
+  const scrollRef = useRef();
+
+  useEffect(() => {
+    scrollRef.current.scrollBy({
+      top: 100,
+      behavior: 'smooth',
+    });
+  }, [chat]);
+
   return (
-    <ChatWrapper>
+    <ChatWrapper ref={scrollRef}>
       {chat.map((chat) =>
         chat.userId === 0 ? (
           <MyChat key={chat.date} users={users} chat={chat} />
