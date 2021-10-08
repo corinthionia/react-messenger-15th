@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./components.mainpage.chatscreen.form.css";
-
+// 스크롤 어떻게 하나요. . .
 function Form({ user, addChat }) {
   const [value, setValue] = useState("");
 
