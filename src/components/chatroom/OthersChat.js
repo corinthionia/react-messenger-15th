@@ -1,43 +1,41 @@
 import styled from 'styled-components';
 
-// 더블 클릭 시 하트 추가하는 기능 구현 중
-const Message = ({ chatObj, chat, setChat, users, heart }) => {
-  const handleDblClick = (date) => {
-    setChat(
-      chat.map((todo) =>
-        todo.date === date
-          ? { ...todo, isDoubleClicked: !todo.isDoubleClicked }
-          : todo
-      )
-    );
-  };
-
+const Message = ({ chat, users, handleDblClick, heart }) => {
   return (
-    <ChatWrapper onDoubleClick={() => handleDblClick(chatObj.date)}>
+    <ChatWrapper onDoubleClick={() => handleDblClick(chat.date)}>
       <ProfileImg src={users[1].img} />
-      <ChatText>{chatObj.text}</ChatText>
+      <ChatText>{chat.text}</ChatText>
       {heart}
     </ChatWrapper>
   );
 };
 
-const OthersChat = ({ chatObj, chat, setChat, users }) => {
+const OthersChat = ({ chat, chatList, setChatList, users }) => {
+  // 상대방의 말풍선을 더블클릭 하면 하트 추가/제거
+  const handleDblClick = (date) => {
+    setChatList(
+      chatList.map((chat) =>
+        chat.date === date
+          ? { ...chat, isDoubleClicked: !chat.isDoubleClicked }
+          : chat
+      )
+    );
+  };
+
   return (
     <>
-      {chatObj.isDoubleClicked ? (
+      {chat.isDoubleClicked ? (
         <Message
-          chatObj={chatObj}
           chat={chat}
-          setChat={setChat}
           users={users}
+          handleDblClick={handleDblClick}
           heart={<Heart>💗</Heart>}
         />
       ) : (
         <Message
-          chatObj={chatObj}
           chat={chat}
-          setChat={setChat}
           users={users}
+          handleDblClick={handleDblClick}
           heart={null}
         />
       )}

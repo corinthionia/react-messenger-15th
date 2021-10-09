@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const MyChat = ({ users, chatObj }) => {
+const MyChat = ({ users, chat }) => {
   return (
     <ChatWrapper>
-      <ChatText>{chatObj.text}</ChatText>
+      <ChatText>{chat.text}</ChatText>
       <ProfileImg src={users[0].img} />
     </ChatWrapper>
   );
@@ -40,6 +40,8 @@ const ChatText = styled.span`
   text-align: justify;
 
   border-radius: 1.25rem;
+
+  -webkit-user-select: none;
 `;
 
 export default MyChat;

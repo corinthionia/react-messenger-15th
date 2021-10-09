@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import MyChat from './MyChat';
 import OthersChat from './OthersChat';
 
-const ChatBox = ({ chat, setChat, users }) => {
+const ChatBox = ({ chatList, setChatList, users }) => {
   const scrollRef = useRef();
 
   useEffect(() => {
@@ -12,19 +12,19 @@ const ChatBox = ({ chat, setChat, users }) => {
       top: 1000,
       behavior: 'smooth',
     });
-  }, [chat]);
+  }, [chatList]);
 
   return (
     <ChatList ref={scrollRef}>
-      {chat.map((chatObj) =>
-        chatObj.userId === 0 ? (
-          <MyChat key={chatObj.date} chatObj={chatObj} users={users} />
+      {chatList.map((chat) =>
+        chat.userId === 0 ? (
+          <MyChat key={chat.date} chat={chat} users={users} />
         ) : (
           <OthersChat
-            key={chatObj.date}
+            key={chat.date}
             chat={chat}
-            chatObj={chatObj}
-            setChat={setChat}
+            chatList={chatList}
+            setChatList={setChatList}
             users={users}
           />
         )

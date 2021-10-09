@@ -19,7 +19,7 @@ const ChatRoom = () => {
     currentUser.id ? setCurrentUser(users[0]) : setCurrentUser(users[1]);
   };
 
-  const [chat, setChat] = useState([
+  const [chatList, setChatList] = useState([
     {
       date: 1633700375865,
       userId: 0,
@@ -55,8 +55,12 @@ const ChatRoom = () => {
   return (
     <>
       <ChatHeader changeUser={changeUser} currentUser={currentUser} />
-      <ChatBox chat={chat} setChat={setChat} users={users} />
-      <InputForm currentUser={currentUser} chat={chat} setChat={setChat} />
+      <ChatBox chatList={chatList} setChatList={setChatList} users={users} />
+      <InputForm
+        currentUser={currentUser}
+        chatList={chatList}
+        setChatList={setChatList}
+      />
     </>
   );
 };

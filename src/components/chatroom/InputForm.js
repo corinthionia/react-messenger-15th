@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-const InputForm = ({ currentUser, chat, setChat }) => {
+const InputForm = ({ currentUser, chatList, setChatList }) => {
   const [inputText, setInputText] = useState('');
 
   const handleInputChange = (e) => {
@@ -19,7 +19,7 @@ const InputForm = ({ currentUser, chat, setChat }) => {
         isDoubleClicked: false,
       };
 
-      setChat([...chat, msg]);
+      setChatList([...chatList, msg]);
     } else {
       alert('Please enter a message.');
     }
