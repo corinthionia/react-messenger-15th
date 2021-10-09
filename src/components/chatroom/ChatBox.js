@@ -16,13 +16,14 @@ const ChatBox = ({ chat, setChat, users }) => {
 
   return (
     <ChatList ref={scrollRef}>
-      {chat.map((chat) =>
-        chat.userId === 0 ? (
-          <MyChat key={chat.date} chat={chat} users={users} />
+      {chat.map((chatObj) =>
+        chatObj.userId === 0 ? (
+          <MyChat key={chatObj.date} chatObj={chatObj} users={users} />
         ) : (
           <OthersChat
-            key={chat.date}
+            key={chatObj.date}
             chat={chat}
+            chatObj={chatObj}
             setChat={setChat}
             users={users}
           />

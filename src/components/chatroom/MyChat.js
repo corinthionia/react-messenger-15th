@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const MyChat = ({ users, chat }) => {
+const MyChat = ({ users, chatObj }) => {
   return (
     <ChatWrapper>
-      <ChatText>{chat.text}</ChatText>
+      <ChatText>{chatObj.text}</ChatText>
       <ProfileImg src={users[0].img} />
     </ChatWrapper>
   );

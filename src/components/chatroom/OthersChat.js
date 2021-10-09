@@ -1,23 +1,45 @@
 import styled from 'styled-components';
 
 // 더블 클릭 시 하트 추가하는 기능 구현 중
-const Message = ({ chat, users, heart }) => {
+const Message = ({ chatObj, chat, setChat, users, heart }) => {
+  const handleDblClick = (date) => {
+    setChat(
+      chat.map((todo) =>
+        todo.date === date
+          ? { ...todo, isDoubleClicked: !todo.isDoubleClicked }
+          : todo
+      )
+    );
+  };
+
   return (
-    <ChatWrapper>
+    <ChatWrapper onDoubleClick={() => handleDblClick(chatObj.date)}>
       <ProfileImg src={users[1].img} />
-      <ChatText>{chat.text}</ChatText>
+      <ChatText>{chatObj.text}</ChatText>
       {heart}
     </ChatWrapper>
   );
 };
 
-const OthersChat = ({ chat, users }) => {
+const OthersChat = ({ chatObj, chat, setChat, users }) => {
   return (
     <>
-      {chat.isDoubleClicked ? (
-        <Message chat={chat} users={users} heart={<Heart>💗</Heart>} />
+      {chatObj.isDoubleClicked ? (
+        <Message
+          chatObj={chatObj}
+          chat={chat}
+          setChat={setChat}
+          users={users}
+          heart={<Heart>💗</Heart>}
+        />
       ) : (
-        <Message chat={chat} users={users} heart={null} />
+        <Message
+          chatObj={chatObj}
+          chat={chat}
+          setChat={setChat}
+          users={users}
+          heart={null}
+        />
       )}
     </>
   );
@@ -51,12 +73,16 @@ const ChatText = styled.span`
 
   background: #efefef;
   border-radius: 1.5rem;
+
+  -webkit-user-select: none;
 `;
 
 const Heart = styled.span`
   font-size: 0.5rem;
   margin: 1rem 0.25rem;
   align-self: flex-end;
+
+  -webkit-user-select: none;
 `;
 
 export default OthersChat;
