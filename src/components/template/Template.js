@@ -10,7 +10,7 @@ const Template = ({ component }) => {
   );
 };
 
-const ChatRoomWrapper = styled.div`
+const ChatRoomWrapper = styled.section`
   height: 50rem;
   width: 22.5rem;
 

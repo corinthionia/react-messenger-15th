@@ -18,13 +18,13 @@ const ChatBox = ({ chat, setChat, users }) => {
     <ChatList ref={scrollRef}>
       {chat.map((chat) =>
         chat.userId === 0 ? (
-          <MyChat key={chat.date} users={users} chat={chat} />
+          <MyChat key={chat.date} chat={chat} users={users} />
         ) : (
           <OthersChat
             key={chat.date}
-            users={users}
             chat={chat}
             setChat={setChat}
+            users={users}
           />
         )
       )}
@@ -36,7 +36,6 @@ const ChatList = styled.section`
   height: 77.5%;
 
   overflow: auto;
-  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 0.75rem;

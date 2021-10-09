@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 import { FiBarChart, FiBatteryCharging, FiWifi } from 'react-icons/fi';
+import moment from 'moment';
 
 const StatusBar = () => {
-  let today = new Date();
-  let hour = today.getHours();
-  let minute = today.getMinutes();
-
   return (
     <Wrapper>
-      <LeftStatusBar>{`${hour}:${minute}`}</LeftStatusBar>
+      <LeftStatusBar>{moment().format('HH:mm')}</LeftStatusBar>
       <RightStatusBar>
         <FiBarChart />
         <FiWifi />

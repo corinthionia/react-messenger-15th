@@ -64,8 +64,8 @@ const ProfileWrapper = styled.section`
 `;
 
 const ProfileImg = styled.img`
-  width: 4vh;
-  height: 4vh;
+  width: 2.5rem;
+  height: 2.5rem;
 
   border-radius: 50%;
 

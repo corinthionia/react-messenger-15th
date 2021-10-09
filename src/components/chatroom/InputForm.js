@@ -12,14 +12,14 @@ const InputForm = ({ currentUser, chat, setChat }) => {
     e.preventDefault();
 
     if (inputText) {
-      const item = {
+      const msg = {
         date: Date.now(),
         userId: currentUser.id,
         text: inputText,
         isDoubleClicked: false,
       };
 
-      setChat([...chat, item]);
+      setChat([...chat, msg]);
     } else {
       alert('Please enter a message.');
     }
