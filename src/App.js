@@ -1,10 +1,8 @@
-import React from "react";
-import MainPage from "./components/mainpage/componens.mainpage.mainpage";
+import React from 'react';
 
 function App() {
   return (
-    <div>
-      <MainPage />
+    <div > 14기 프론트엔드 짱 =_=
     </div>
   );
 }
