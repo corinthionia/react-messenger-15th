@@ -1,11 +1,16 @@
 import styled from 'styled-components';
+import FriendsList from '../components/friends/FriendsList';
 
 import NavigationBar from '../components/template/NavigationBar';
 import Template from '../components/template/Template';
 
-const Users = () => {
+const Friends = () => {
   return (
-    <Template header={<Title>Friends</Title>} bottom={<NavigationBar />} />
+    <Template
+      header={<Title>Friends</Title>}
+      content={<FriendsList />}
+      bottom={<NavigationBar />}
+    />
   );
 };
 
@@ -16,4 +21,4 @@ const Title = styled.span`
   font-weight: 600;
 `;
 
-export default Users;
+export default Friends;

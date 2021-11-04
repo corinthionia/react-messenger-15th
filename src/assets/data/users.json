@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "name": "j__hy_n",
+    "img": "profile0.jpg",
+    "statusMsg": "하하하하"
+  },
+  {
+    "id": 1,
+    "name": "corinthionia",
+    "img": "profile1.jpg",
+    "statusMsg": "하하"
+  },
+  {
+    "id": 2,
+    "name": "Friends1",
+    "img": "profile1.jpg",
+    "statusMsg": "하"
+  },
+  {
+    "id": 3,
+    "name": "Friends2",
+    "img": "profile1.jpg",
+    "statusMsg": "하하핫"
+  },
+  {
+    "id": 4,
+    "name": "Friends3",
+    "img": "profile1.jpg",
+    "statusMsg": "하하하하하핫"
+  },
+  {
+    "id": 5,
+    "name": "Friends4",
+    "img": "profile1.jpg",
+    "statusMsg": "핫"
+  }
+]
