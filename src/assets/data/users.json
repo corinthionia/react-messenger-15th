@@ -1,11 +1,5 @@
 [
   {
-    "id": 0,
-    "name": "j__hy_n",
-    "img": "profile0.jpg",
-    "statusMsg": "하하하하"
-  },
-  {
     "id": 1,
     "name": "corinthionia",
     "img": "profile1.jpg",
@@ -34,5 +28,11 @@
     "name": "Friends4",
     "img": "profile1.jpg",
     "statusMsg": "핫"
+  },
+  {
+    "id": 6,
+    "name": "Friends5",
+    "img": "profile1.jpg",
+    "statusMsg": "하핫 썸머"
   }
 ]

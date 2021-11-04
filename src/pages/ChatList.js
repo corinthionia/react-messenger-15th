@@ -15,7 +15,7 @@ const ChatList = () => {
 };
 
 const Title = styled.span`
-  margin: 3rem 2rem 0 2rem;
+  margin: 2rem 2rem 0 1rem;
 
   font-size: 2rem;
   font-weight: 600;
