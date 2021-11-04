@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 import { FiChevronLeft } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const ChatHeader = ({ changeUser, currentUser }) => {
   return (
     <>
-      <BackBtn>
-        <FiChevronLeft />
-      </BackBtn>
+      <Link to={'/chatList'}>
+        <BackBtn>
+          <FiChevronLeft />
+        </BackBtn>
+      </Link>
       <ProfileWrapper onClick={changeUser}>
         <ProfileImg src={currentUser.img} />
         <TextWrapper>

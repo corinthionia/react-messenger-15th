@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 
 import ChatBox from '../components/chatroom/ChatBox';
 import InputForm from '../components/chatroom/InputForm';
