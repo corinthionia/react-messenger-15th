@@ -1,5 +1,6 @@
+import Template from '../components/template/Template';
 const Main = () => {
-  return <div>Main Page</div>;
+  return <Template content={'Main'} bottom={'Nav'} />;
 };
 
 export default Main;

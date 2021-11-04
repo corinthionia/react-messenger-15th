@@ -31,7 +31,7 @@ const InputForm = ({ currentUser, chatList, setChatList }) => {
   };
 
   return (
-    <Form>
+    <>
       <AddBtn type="button" onClick={sendSticker}>
         😀
       </AddBtn>
@@ -41,19 +41,9 @@ const InputForm = ({ currentUser, chatList, setChatList }) => {
         placeholder="Message..."
       />
       <AddBtn onClick={addNewMsg}>➕</AddBtn>
-    </Form>
+    </>
   );
 };
-
-const Form = styled.form`
-  height: 10%;
-
-  border-top: 0.1rem solid #efefef;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-`;
 
 const Input = styled.input`
   height: 50%;

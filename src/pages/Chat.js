@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-import ChatHeader from './ChatHeader';
-import ChatBox from './ChatBox';
-import InputForm from './InputForm';
+import ChatBox from '../components/chatroom/ChatBox';
+import InputForm from '../components/chatroom/InputForm';
+import Template from '../components/template/Template';
+import ChatHeader from '../components/chatroom/ChatHeader';
 
-import profile0 from '../users/img/profile0.jpg';
-import profile1 from '../users/img/profile1.jpg';
+import profile0 from '../components/users/img/profile0.jpg';
+import profile1 from '../components/users/img/profile1.jpg';
 
-const ChatRoom = () => {
+const Chat = () => {
   const users = [
     { id: 0, name: 'j__hy_n', img: profile0 },
     { id: 1, name: 'corinthionia', img: profile1 },
@@ -53,16 +54,20 @@ const ChatRoom = () => {
   ]);
 
   return (
-    <>
-      <ChatHeader changeUser={changeUser} currentUser={currentUser} />
-      <ChatBox chatList={chatList} setChatList={setChatList} users={users} />
-      <InputForm
-        currentUser={currentUser}
-        chatList={chatList}
-        setChatList={setChatList}
-      />
-    </>
+    <Template
+      header={<ChatHeader changeUser={changeUser} currentUser={currentUser} />}
+      content={
+        <ChatBox chatList={chatList} setChatList={setChatList} users={users} />
+      }
+      bottom={
+        <InputForm
+          currentUser={currentUser}
+          chatList={chatList}
+          setChatList={setChatList}
+        />
+      }
+    />
   );
 };
 
-export default ChatRoom;
+export default Chat;

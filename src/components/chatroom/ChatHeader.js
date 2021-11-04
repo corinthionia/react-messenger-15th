@@ -3,7 +3,7 @@ import { FiChevronLeft } from 'react-icons/fi';
 
 const ChatHeader = ({ changeUser, currentUser }) => {
   return (
-    <Header>
+    <>
       <BackBtn>
         <FiChevronLeft />
       </BackBtn>
@@ -15,19 +15,9 @@ const ChatHeader = ({ changeUser, currentUser }) => {
         </TextWrapper>
       </ProfileWrapper>
       <Blank />
-    </Header>
+    </>
   );
 };
-
-const Header = styled.header`
-  height: 10%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border-bottom: 0.1rem solid #efefef;
-`;
 
 const BackBtn = styled.button`
   width: 10%;
