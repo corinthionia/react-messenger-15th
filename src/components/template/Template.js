@@ -3,16 +3,16 @@ import StatusBar from './StatusBar';
 
 const Template = ({ component }) => {
   return (
-    <ChatRoomWrapper>
+    <Wrapper>
       <StatusBar />
       {component}
-    </ChatRoomWrapper>
+    </Wrapper>
   );
 };
 
-const ChatRoomWrapper = styled.section`
-  height: 60rem;
-  width: 27rem;
+const Wrapper = styled.section`
+  height: 50rem;
+  width: 22.5rem;
 
   margin: 0;
   border: 0.1rem solid #efefef;

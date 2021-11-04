@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 const MyChat = ({ users, chat }) => {
+  const me = users[0];
+
   return (
     <ChatWrapper>
       <ChatText>{chat.text}</ChatText>
-      <ProfileImg src={users[0].img} />
+      <ProfileImg src={me.img} />
     </ChatWrapper>
   );
 };
