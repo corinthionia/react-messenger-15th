@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
-import Template from './components/template/Template';
 
-import Main from './pages/Main';
 import Chat from './pages/Chat';
 import Users from './pages/Users';
 import Setting from './pages/Setting';
@@ -15,17 +13,10 @@ function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/users" element={<Template component={<Users />} />} />
-          <Route
-            path="/chatList"
-            element={<Template component={<ChatList />} />}
-          />
+          <Route path="/" element={<Users />} />
+          <Route path="/chatList" element={<ChatList />} />
           <Route path="/chat" element={<Chat />} />
-          <Route
-            path="/setting"
-            element={<Template component={<Setting />} />}
-          />
+          <Route path="/setting" element={<Setting />} />
         </Routes>
       </BrowserRouter>
     </>
