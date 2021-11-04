@@ -8,8 +8,8 @@ const ChatBox = ({ chatList, setChatList, users }) => {
   const scrollRef = useRef();
 
   useEffect(() => {
-    scrollRef.current.scrollBy({
-      top: 1000,
+    scrollRef.current.scrollTo({
+      top: 10000,
       behavior: 'smooth',
     });
   }, [chatList]);
