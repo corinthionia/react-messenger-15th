@@ -18,7 +18,7 @@ const SearchUser = () => {
 
   const ResultList = () => {
     return (
-      <ResultWrapper>
+      <>
         {results.map((user) => (
           <Wrapper key={user.id}>
             <ProfileImg src={profile0} />
@@ -28,7 +28,7 @@ const SearchUser = () => {
             </TextWrapper>
           </Wrapper>
         ))}
-      </ResultWrapper>
+      </>
     );
   };
 
@@ -64,8 +64,6 @@ const AddBtn = styled.button`
   border: none;
   background: none;
 `;
-
-const ResultWrapper = styled.section``;
 
 const Wrapper = styled.section`
   height: 20%;

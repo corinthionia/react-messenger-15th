@@ -9,7 +9,7 @@ const List = () => {
   return (
     <>
       {users.map((user) => (
-        <Link to={'/chat/' + user.id} key={user.id}>
+        <StyledLink to={'/chat/' + user.id} key={user.id}>
           <Wrapper>
             <ProfileImg src={profile1} />
             <TextWrapper>
@@ -17,11 +17,15 @@ const List = () => {
               <Message>{user.statusMsg}</Message>
             </TextWrapper>
           </Wrapper>
-        </Link>
+        </StyledLink>
       ))}
     </>
   );
 };
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 
 const Wrapper = styled.section`
   height: 20%;
@@ -53,9 +57,12 @@ const TextWrapper = styled.section`
 
   display: flex;
   flex-direction: column;
+
+  color: black;
+  text-decoration: none;
 `;
 
-const Name = styled.div`
+const Name = styled.span`
   font-weight: bold;
   margin-bottom: 0.5rem;
 `;
