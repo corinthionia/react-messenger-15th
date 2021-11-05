@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import { BsSearch } from 'react-icons/bs';
-import FriendsList from '../components/friends/FriendsList';
+import { Link } from 'react-router-dom';
 
+import { BsSearch } from 'react-icons/bs';
+
+import FriendsList from '../components/friends/FriendsList';
 import NavigationBar from '../components/template/NavigationBar';
 import Template from '../components/template/Template';
-import { Link } from 'react-router-dom';
 
 const Friends = () => {
   return (
