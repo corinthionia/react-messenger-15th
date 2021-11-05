@@ -10,12 +10,11 @@ import chat from '../assets/data/chat.json';
 
 const Chat = () => {
   const [currentUser, setCurrentUser] = useState(users[0]);
+  const [chatList, setChatList] = useState(chat);
 
   const changeUser = () => {
     currentUser.id ? setCurrentUser(users[0]) : setCurrentUser(users[1]);
   };
-
-  const [chatList, setChatList] = useState(chat);
 
   return (
     <Template

@@ -1,20 +1,27 @@
 import styled from 'styled-components';
 
 import users from '../../assets/data/users.json';
+import me from '../../assets/data/me.json';
+
 import profile0 from '../../assets/profileImg/profile0.jpg';
 
 const FriendsList = () => {
+  const makeList = (user) => {
+    return (
+      <Wrapper key={user.id}>
+        <ProfileImg src={profile0} />
+        <TextWrapper>
+          <Name>{user.name}</Name>
+          <StatusMsg>{user.statusMsg}</StatusMsg>
+        </TextWrapper>
+      </Wrapper>
+    );
+  };
+
   return (
     <>
-      {users.map((user) => (
-        <Wrapper>
-          <ProfileImg src={profile0} />
-          <TextWrapper>
-            <Name>{user.name}</Name>
-            <StatusMsg>{user.statusMsg}</StatusMsg>
-          </TextWrapper>
-        </Wrapper>
-      ))}
+      {makeList(me)}
+      {users.map((user) => makeList(user))}
     </>
   );
 };

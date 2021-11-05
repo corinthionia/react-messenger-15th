@@ -1,38 +1,38 @@
 [
   {
     "id": 1,
-    "name": "corinthionia",
+    "name": "IU",
     "img": "profile1.jpg",
-    "statusMsg": "하하"
+    "statusMsg": "Blueming"
   },
   {
     "id": 2,
-    "name": "Friends1",
+    "name": "Rose",
     "img": "profile1.jpg",
-    "statusMsg": "하"
+    "statusMsg": "Gone"
   },
   {
     "id": 3,
-    "name": "Friends2",
+    "name": "Post Malone",
     "img": "profile1.jpg",
-    "statusMsg": "하하핫"
+    "statusMsg": "Circles"
   },
   {
     "id": 4,
-    "name": "Friends3",
+    "name": "Heize",
     "img": "profile1.jpg",
-    "statusMsg": "하하하하하핫"
+    "statusMsg": "여름이었다~..."
   },
   {
     "id": 5,
-    "name": "Friends4",
+    "name": "Baek Hyun",
     "img": "profile1.jpg",
-    "statusMsg": "핫"
+    "statusMsg": "Bungee"
   },
   {
     "id": 6,
-    "name": "Friends5",
+    "name": "Beenzino",
     "img": "profile1.jpg",
-    "statusMsg": "하핫 썸머"
+    "statusMsg": "Always Awake"
   }
 ]

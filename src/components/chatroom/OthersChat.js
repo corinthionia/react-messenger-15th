@@ -13,12 +13,16 @@ const Message = ({ chat, users, handleDblClick, heart }) => {
 const OthersChat = ({ chat, chatList, setChatList, users }) => {
   // 상대방의 말풍선을 더블클릭 하면 하트 추가/제거
   const handleDblClick = (date) => {
-    setChatList(
-      chatList.map((chat) =>
-        chat.date === date
-          ? { ...chat, isDoubleClicked: !chat.isDoubleClicked }
-          : chat
-      )
+    return (
+      <>
+        {setChatList(
+          chatList.map((chat) =>
+            chat.date === date
+              ? { ...chat, isDoubleClicked: !chat.isDoubleClicked }
+              : chat
+          )
+        )}
+      </>
     );
   };
 

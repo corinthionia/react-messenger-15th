@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import users from '../../assets/data/users.json';
-import chat from '../../assets/data/chat.json';
 
 import profile1 from '../../assets/profileImg/profile1.jpg';
 import { Link } from 'react-router-dom';
@@ -10,7 +9,7 @@ const List = () => {
   return (
     <>
       {users.map((user) => (
-        <Link to={'/chat/' + user.id}>
+        <Link to={'/chat/' + user.id} key={user.id}>
           <Wrapper>
             <ProfileImg src={profile1} />
             <TextWrapper>

@@ -10,10 +10,10 @@ const Friends = () => {
     <Template
       header={
         <Wrapper>
+          <Title>Friends</Title>
           <SearchBtn>
             <BsSearch />
           </SearchBtn>
-          <Title>Friends</Title>
         </Wrapper>
       }
       content={<FriendsList />}
@@ -24,12 +24,15 @@ const Friends = () => {
 
 const Wrapper = styled.section`
   display: flex;
-  flex-direction: column;
-
-  padding: 1rem;
+  flex-direction: row;
 `;
 
 const SearchBtn = styled.button`
+  width: 2rem;
+  height: 2rem;
+
+  margin: 0.5rem 7.5rem;
+
   background: none;
   border: none;
 
@@ -39,7 +42,7 @@ const SearchBtn = styled.button`
 `;
 
 const Title = styled.span`
-  margin: 0.5rem 2rem 0 0;
+  margin: 2rem 2rem 0 1rem;
 
   font-size: 2rem;
   font-weight: 600;
