@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 import NavigationBar from '../components/template/NavigationBar';
 import Template from '../components/template/Template';
-import List from '../components/chatlist/List';
+import ListBox from '../components/chatlist/ListBox';
 
 const ChatList = () => {
   return (
     <Template
       header={<Title>Messages</Title>}
-      content={<List />}
+      content={<ListBox />}
       bottom={<NavigationBar />}
     />
   );

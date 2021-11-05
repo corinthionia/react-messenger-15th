@@ -1,19 +1,18 @@
+import styled from 'styled-components';
+import { useParams } from 'react-router';
+import { useEffect, useRef } from 'react';
+
 import MyChat from './MyChat';
 import OthersChat from './OthersChat';
 
-import { useEffect, useRef } from 'react';
-
-import chat from '../../assets/data/chat.json';
-import { useParams } from 'react-router';
-import styled from 'styled-components';
-
-const ChatBox = ({ setChatList, users }) => {
-  const { userId } = useParams();
+const ChatBox = ({ chatList }) => {
   const scrollRef = useRef();
+  const { userId } = useParams();
 
   // 제가 이 parseInt 때문에 몇 시간을 고생했는지 아시나요. . .  ........... .......... ㅠㅠ
-  const chatList = chat.filter((chats) => chats.userId === parseInt(userId))[0]
-    .message;
+  const filteredChatList = chatList.filter(
+    (chats) => chats.userId === parseInt(userId)
+  )[0].message;
 
   useEffect(() => {
     scrollRef.current.scrollTo({
@@ -22,25 +21,24 @@ const ChatBox = ({ setChatList, users }) => {
     });
   }, [chatList]);
 
+  console.log(filteredChatList);
+
   return (
     <Wrapper ref={scrollRef}>
-      {chatList.map((chat) =>
+      {filteredChatList.map((chat) =>
         chat.sender === 0 ? (
           <MyChat key={chat.date} chat={chat} />
         ) : (
-          <OthersChat
-            key={chat.date}
-            chat={chat}
-            chatList={chatList}
-            setChatList={setChatList}
-            users={users}
-          />
+          <OthersChat key={chat.date} chat={chat} />
         )
       )}
     </Wrapper>
   );
 };
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  width: 100%;
+  height: 100%;
+`;
 
 export default ChatBox;

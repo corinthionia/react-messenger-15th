@@ -8,13 +8,13 @@ import ChatHeader from '../components/chatroom/ChatHeader';
 
 import me from '../assets/data/me.json';
 import users from '../assets/data/users.json';
-import chat from '../assets/data/chat.json';
 
 const Chat = () => {
   const { userId } = useParams();
-
   const [currentUser, setCurrentUser] = useState(me);
-  const [chatList, setChatList] = useState(chat);
+
+  // local storage에 저장된 데이터(갱신된 chatList)를 불러와서 chatList에 저장
+  const chatList = JSON.parse(localStorage.getItem('chats'));
 
   const changeUser = () => {
     currentUser.id ? setCurrentUser(me) : setCurrentUser(users[userId - 1]);
@@ -23,14 +23,8 @@ const Chat = () => {
   return (
     <Template
       header={<ChatHeader changeUser={changeUser} currentUser={currentUser} />}
-      content={<ChatBox setChatList={setChatList} users={users} />}
-      bottom={
-        <InputForm
-          currentUser={currentUser}
-          chatList={chatList}
-          setChatList={setChatList}
-        />
-      }
+      content={<ChatBox chatList={chatList} />}
+      bottom={<InputForm chatList={chatList} currentUser={currentUser} />}
     />
   );
 };

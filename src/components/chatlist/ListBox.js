@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import users from '../../assets/data/users.json';
 
-const List = () => {
+const ListBox = () => {
   return (
     <>
       {users.map((user) => (
@@ -75,4 +75,4 @@ const Message = styled.span`
   font-size: 0.5rem;
 `;
 
-export default List;
+export default ListBox;

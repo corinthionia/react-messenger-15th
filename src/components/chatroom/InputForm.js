@@ -1,10 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import styled from 'styled-components';
 
-import chatList from '../../assets/data/chat.json';
-
-const InputForm = ({ currentUser, setChatList }) => {
+const InputForm = ({ chatList, currentUser }) => {
   const [inputText, setInputText] = useState('');
   const { userId } = useParams();
 
@@ -23,10 +21,7 @@ const InputForm = ({ currentUser, setChatList }) => {
         isDoubleClicked: false,
       };
 
-      const newList = chatList[parseInt(userId) - 1].message.push(msg);
-      //   setChatList([...chatList[parseInt(userId) - 1].message, msg]);
-      //   console.log(chatList[parseInt(userId) - 1].message.push(msg));
-      console.log(newList);
+      chatList[parseInt(userId) - 1].message.push(msg);
     } else {
       alert('Please enter a message.');
     }
@@ -37,6 +32,11 @@ const InputForm = ({ currentUser, setChatList }) => {
   const sendSticker = () => {
     alert('이모티콘은 준비 중입니다... 🙄');
   };
+
+  // local storage에 갱신된 chatList 저장하기
+  useEffect(() => {
+    localStorage.setItem('chats', JSON.stringify(chatList));
+  }, [chatList]);
 
   return (
     <>
