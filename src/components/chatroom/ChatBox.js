@@ -1,30 +1,29 @@
-import { useParams } from 'react-router';
-
 import MyChat from './MyChat';
 import OthersChat from './OthersChat';
 
-import chats from '../../assets/data/chat.json';
+import chat from '../../assets/data/chat.json';
+import { useParams } from 'react-router';
 
-const ChatBox = ({ chatList, setChatList, users }) => {
+const ChatBox = ({ setChatList, users }) => {
   const { userId } = useParams();
 
-  //   const myChatList = chatList.filter((chat) => chat.userId === 0);
-  //   const othersChatList = chatList.filter((data) => data.userId.userId);
-
-  //   console.log(othersChatList);
+  // 제가 이 parseInt 때문에 몇 시간을 고생했는지 아시나요. . .  ........... .......... ㅠㅠ
+  const chatList = chat.filter((chats) => chats.userId === parseInt(userId))[0]
+    .message;
+  console.log(chatList);
 
   return (
     <>
-      {chats.map((chat) =>
-        chat.userId === 0 ? (
-          <MyChat chat={chat} users={users} />
+      {chatList.map((chat) =>
+        chat.sender === 0 ? (
+          <MyChat key={chat.date} chat={chat} users={users} />
         ) : (
           <OthersChat
+            key={chat.date}
             chat={chat}
             chatList={chatList}
             setChatList={setChatList}
             users={users}
-            userId={userId}
           />
         )
       )}

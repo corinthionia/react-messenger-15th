@@ -7,7 +7,7 @@ const MyChat = ({ users, chat }) => {
 
   return (
     <ChatWrapper>
-      <ChatText>{chat.message.text}</ChatText>
+      <ChatText>{chat.text}</ChatText>
       <ProfileImg src={me.img} />
     </ChatWrapper>
   );

@@ -40,28 +40,24 @@
       {
         "date": 1005,
         "sender": 2,
-
         "text": "I just wanna be the one",
         "isDoubleClicked": true
       },
       {
         "date": 1006,
         "sender": 2,
-
         "text": "But to you we’re already done",
         "isDoubleClicked": false
       },
       {
         "date": 1007,
         "sender": 0,
-
         "text": "Tell me why’d you have to hit and run me",
         "isDoubleClicked": false
       },
       {
         "date": 1008,
         "sender": 0,
-
         "text": "Now I’m all alone crying ugly",
         "isDoubleClicked": false
       }
@@ -107,19 +103,18 @@
       {
         "date": 1013,
         "sender": 5,
-
         "text": "조금 답답해 너와 눈 맞출 때 난 그 깊은 곳까지 들여다보고 싶은데",
         "isDoubleClicked": true
       },
       {
         "date": 1014,
-        "receiver": 0,
+        "sender": 0,
         "text": "너의 손가락이 스치기라도 하면",
         "isDoubleClicked": false
       },
       {
         "date": 1015,
-        "receiver": 0,
+        "sender": 0,
         "text": "내 맘 아득해지는걸",
         "isDoubleClicked": false
       }
