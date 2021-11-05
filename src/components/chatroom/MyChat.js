@@ -3,8 +3,6 @@ import styled from 'styled-components';
 const MyChat = ({ users, chat }) => {
   const me = users[0];
 
-  console.log(chat.message);
-
   return (
     <ChatWrapper>
       <ChatText>{chat.text}</ChatText>

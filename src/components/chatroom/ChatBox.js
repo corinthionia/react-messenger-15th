@@ -10,7 +10,6 @@ const ChatBox = ({ setChatList, users }) => {
   // 제가 이 parseInt 때문에 몇 시간을 고생했는지 아시나요. . .  ........... .......... ㅠㅠ
   const chatList = chat.filter((chats) => chats.userId === parseInt(userId))[0]
     .message;
-  console.log(chatList);
 
   return (
     <>

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
 const Message = ({ chat, users, handleDblClick, heart }) => {
@@ -12,11 +11,6 @@ const Message = ({ chat, users, handleDblClick, heart }) => {
 };
 
 const OthersChat = ({ chat, chatList, setChatList, users, userId }) => {
-  //   const [chats, setChats] = useState();
-
-  //   const newChat = chatList.filter((chat) => chat.userId === userId);
-  //   setChats(newChat);
-
   // 상대방의 말풍선을 더블클릭 하면 하트 추가/제거
   const handleDblClick = (date) => {
     return (
