@@ -1,9 +1,14 @@
 import styled from 'styled-components';
+import { useParams } from 'react-router';
 
-const Message = ({ chat, users, handleDblClick, heart }) => {
+const Message = ({ chat, handleDblClick, heart }) => {
+  const { userId } = useParams();
+
   return (
     <ChatWrapper onDoubleClick={() => handleDblClick(chat.date)}>
-      <ProfileImg src={users[1].img} />
+      <ProfileImg
+        src={require('../../assets/profileImg/' + userId + '.jpg').default}
+      />
       <ChatText>{chat.text}</ChatText>
       {heart}
     </ChatWrapper>
@@ -45,14 +50,13 @@ const OthersChat = ({ chat, chatList, setChatList, users, userId }) => {
 const ChatWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
 `;
 
 const ProfileImg = styled.img`
   width: 2rem;
   height: 2rem;
 
-  margin: 0.5rem;
+  margin: 2.5rem 0.5rem 0 0.5rem;
   border-radius: 50%;
 
   object-fit: cover;
@@ -69,7 +73,7 @@ const ChatText = styled.span`
   text-align: justify;
 
   background: #efefef;
-  border-radius: 1.5rem;
+  border-radius: 1.25rem 1.25rem 1.25rem 0.25rem;
 
   -webkit-user-select: none;
 `;

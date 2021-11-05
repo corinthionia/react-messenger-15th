@@ -11,7 +11,12 @@ const ChatHeader = ({ changeUser, currentUser }) => {
         </BackBtn>
       </Link>
       <ProfileWrapper onClick={changeUser}>
-        <ProfileImg src={currentUser.img} />
+        <ProfileImg
+          src={
+            require('../../assets/profileImg/' + currentUser.id + '.jpg')
+              .default
+          }
+        />
         <TextWrapper>
           <ProfileName>{currentUser.name}</ProfileName>
           <ProfileText>Typing ...</ProfileText>

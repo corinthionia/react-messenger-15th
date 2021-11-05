@@ -3,7 +3,6 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import users from '../../assets/data/users.json';
-import profile0 from '../../assets/profileImg/profile0.jpg';
 
 const SearchUser = () => {
   const [inputText, setInputText] = useState('d');
@@ -21,7 +20,11 @@ const SearchUser = () => {
       <>
         {results.map((user) => (
           <Wrapper key={user.id}>
-            <ProfileImg src={profile0} />
+            <ProfileImg
+              src={
+                require('../../assets/profileImg/' + user.id + '.jpg').default
+              }
+            />
             <TextWrapper>
               <Name>{user.name}</Name>
               <StatusMsg>{user.statusMsg}</StatusMsg>

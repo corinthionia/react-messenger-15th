@@ -1,8 +1,12 @@
 import { useState } from 'react';
+import { useParams } from 'react-router';
 import styled from 'styled-components';
 
-const InputForm = ({ currentUser, chatList, setChatList }) => {
+import chatList from '../../assets/data/chat.json';
+
+const InputForm = ({ currentUser, setChatList }) => {
   const [inputText, setInputText] = useState('');
+  const { userId } = useParams();
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
@@ -14,15 +18,19 @@ const InputForm = ({ currentUser, chatList, setChatList }) => {
     if (inputText) {
       const msg = {
         date: Date.now(),
-        userId: currentUser.id,
+        sender: currentUser.id,
         text: inputText,
         isDoubleClicked: false,
       };
 
-      setChatList([...chatList, msg]);
+      const newList = chatList[parseInt(userId) - 1].message.push(msg);
+      //   setChatList([...chatList[parseInt(userId) - 1].message, msg]);
+      //   console.log(chatList[parseInt(userId) - 1].message.push(msg));
+      console.log(newList);
     } else {
       alert('Please enter a message.');
     }
+
     setInputText('');
   };
 

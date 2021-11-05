@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import users from '../../assets/data/users.json';
 import me from '../../assets/data/me.json';
 
-import profile0 from '../../assets/profileImg/profile0.jpg';
-
 const FriendsList = () => {
   const makeList = (user) => {
     return (
       <Wrapper key={user.id}>
-        <ProfileImg src={profile0} />
+        <ProfileImg
+          src={require('../../assets/profileImg/' + user.id + '.jpg').default}
+        />
         <TextWrapper>
           <Name>{user.name}</Name>
           <StatusMsg>{user.statusMsg}</StatusMsg>
@@ -31,13 +31,14 @@ const Wrapper = styled.section`
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
 `;
 
 const ProfileImg = styled.img`
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
 
-  margin: 0.5rem;
+  margin: 0 0.5rem 0 1rem;
   padding: 1.25rem 1rem;
 
   border-radius: 50%;
@@ -52,6 +53,7 @@ const TextWrapper = styled.section`
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 const Name = styled.div`

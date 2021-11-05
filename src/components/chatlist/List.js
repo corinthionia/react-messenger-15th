@@ -1,9 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import users from '../../assets/data/users.json';
-
-import profile1 from '../../assets/profileImg/profile1.jpg';
-import { Link } from 'react-router-dom';
 
 const List = () => {
   return (
@@ -11,7 +9,11 @@ const List = () => {
       {users.map((user) => (
         <StyledLink to={'/chat/' + user.id} key={user.id}>
           <Wrapper>
-            <ProfileImg src={profile1} />
+            <ProfileImg
+              src={
+                require('../../assets/profileImg/' + user.id + '.jpg').default
+              }
+            />
             <TextWrapper>
               <Name>{user.name}</Name>
               <Message>{user.statusMsg}</Message>
@@ -32,6 +34,7 @@ const Wrapper = styled.section`
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
   &:hover {
     cursor: pointer;
@@ -39,10 +42,10 @@ const Wrapper = styled.section`
 `;
 
 const ProfileImg = styled.img`
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
 
-  margin: 0.5rem;
+  margin: 0 0.5rem 0 1rem;
   padding: 1.25rem 1rem;
 
   border-radius: 50%;
@@ -57,6 +60,7 @@ const TextWrapper = styled.section`
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   color: black;
   text-decoration: none;

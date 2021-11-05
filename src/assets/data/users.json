@@ -2,37 +2,37 @@
   {
     "id": 1,
     "name": "IU",
-    "img": "profile1.jpg",
+    "img": "1.jpg",
     "statusMsg": "Blueming"
   },
   {
     "id": 2,
     "name": "Rose",
-    "img": "profile1.jpg",
+    "img": "2.jpg",
     "statusMsg": "Gone"
   },
   {
     "id": 3,
     "name": "Post Malone",
-    "img": "profile1.jpg",
+    "img": "3.jpg",
     "statusMsg": "Circles"
   },
   {
     "id": 4,
     "name": "Heize",
-    "img": "profile1.jpg",
+    "img": "4.jpg",
     "statusMsg": "And July (여름이었다...~)"
   },
   {
     "id": 5,
     "name": "Baek Hyun",
-    "img": "profile1.jpg",
+    "img": "5.jpg",
     "statusMsg": "Bungee"
   },
   {
     "id": 6,
     "name": "Beenzino",
-    "img": "profile1.jpg",
+    "img": "6.jpg",
     "statusMsg": "Always Awake"
   }
 ]

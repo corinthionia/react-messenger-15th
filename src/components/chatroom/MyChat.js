@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
-const MyChat = ({ users, chat }) => {
-  const me = users[0];
-
+const MyChat = ({ chat }) => {
   return (
     <ChatWrapper>
       <ChatText>{chat.text}</ChatText>
-      <ProfileImg src={me.img} />
+      <ProfileImg src={require('../../assets/profileImg/0.jpg').default} />
     </ChatWrapper>
   );
 };
@@ -15,15 +13,13 @@ const ChatWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-
-  align-items: center;
 `;
 
 const ProfileImg = styled.img`
   width: 2rem;
   height: 2rem;
 
-  margin: 0.5rem;
+  margin: 0 0.5rem;
   border-radius: 50%;
 
   object-fit: cover;
@@ -41,7 +37,7 @@ const ChatText = styled.span`
 
   text-align: justify;
 
-  border-radius: 1.25rem;
+  border-radius: 1.25rem 0.25rem 1.25rem 1.25rem;
 
   -webkit-user-select: none;
 `;
