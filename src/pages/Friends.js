@@ -4,6 +4,7 @@ import FriendsList from '../components/friends/FriendsList';
 
 import NavigationBar from '../components/template/NavigationBar';
 import Template from '../components/template/Template';
+import { Link } from 'react-router-dom';
 
 const Friends = () => {
   return (
@@ -11,9 +12,11 @@ const Friends = () => {
       header={
         <Wrapper>
           <Title>Friends</Title>
-          <SearchBtn>
-            <BsSearch />
-          </SearchBtn>
+          <Link to="/search">
+            <SearchBtn>
+              <BsSearch />
+            </SearchBtn>
+          </Link>
         </Wrapper>
       }
       content={<FriendsList />}

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 import Chat from './pages/Chat';
+import Search from './pages/Search';
 import Friends from './pages/Friends';
 import Setting from './pages/Setting';
 import ChatList from './pages/ChatList';
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Friends />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/chatList" element={<ChatList />} />
           <Route path="/chat/:userId" element={<Chat />} />
           <Route path="/setting" element={<Setting />} />
