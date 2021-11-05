@@ -3,9 +3,11 @@ import styled from 'styled-components';
 const MyChat = ({ users, chat }) => {
   const me = users[0];
 
+  console.log(chat.message);
+
   return (
     <ChatWrapper>
-      <ChatText>{chat.text}</ChatText>
+      <ChatText>{chat.message.text}</ChatText>
       <ProfileImg src={me.img} />
     </ChatWrapper>
   );
