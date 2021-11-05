@@ -22,8 +22,8 @@ const Setting = () => {
     <Template
       header={<Title>Setting</Title>}
       content={settingMenu.map((menu) => (
-        <Box>
-          <Wrapper key={menu.id}>
+        <Box key={menu.id}>
+          <Wrapper>
             <Icon>{menu.icon}</Icon>
             <MenuTitle> {menu.title}</MenuTitle>
           </Wrapper>
