@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import styled from 'styled-components';
 
+// 아직 수정 중입니다...
+
 const InputForm = ({ chatList, currentUser }) => {
   const [inputText, setInputText] = useState('');
   const { userId } = useParams();
@@ -21,6 +23,7 @@ const InputForm = ({ chatList, currentUser }) => {
         isDoubleClicked: false,
       };
 
+      // 이걸 push 말고 state라든가 다른 걸 쓰는 방법이 있을까요?
       chatList[parseInt(userId) - 1].message.push(msg);
     } else {
       alert('Please enter a message.');
@@ -32,11 +35,6 @@ const InputForm = ({ chatList, currentUser }) => {
   const sendSticker = () => {
     alert('이모티콘은 준비 중입니다... 🙄');
   };
-
-  // local storage에 갱신된 chatList 저장하기
-  useEffect(() => {
-    localStorage.setItem('chats', JSON.stringify(chatList));
-  }, [chatList]);
 
   return (
     <>

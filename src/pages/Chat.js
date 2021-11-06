@@ -11,11 +11,13 @@ import users from '../assets/data/users.json';
 import chat from '../assets/data/chat.json';
 
 const Chat = () => {
+  const [chats, setChats] = useState(chat);
+
   const { userId } = useParams();
   const [currentUser, setCurrentUser] = useState(me);
 
   // 테스트...
-  const chatList = chat;
+  const chatList = chats;
 
   const changeUser = () => {
     currentUser.id
