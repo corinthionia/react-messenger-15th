@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const Template = ({ header, content, bottom }) => {
+const Template = ({ header, content, background, bottom }) => {
   return (
-    <Wrapper>
+    <Wrapper background={background}>
       <Header>{header}</Header>
       <Content>{content}</Content>
       <Bottom>{bottom}</Bottom>
@@ -19,7 +19,7 @@ const Wrapper = styled.section`
 
   overflow: hidden;
 
-  background: #e9effd;
+  background: ${(props) => props.background || '#ffffff'};
 
   border: 0.1rem solid #efefef;
   border-radius: 2.5rem;

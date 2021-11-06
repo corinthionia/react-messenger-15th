@@ -9,6 +9,7 @@ const Search = () => {
     <Template
       header={<Title>Search</Title>}
       content={<SearchUser />}
+      background={false}
       bottom={<NavigationBar />}
     />
   );

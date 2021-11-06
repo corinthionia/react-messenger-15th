@@ -9,6 +9,7 @@ const ChatList = () => {
     <Template
       header={<Title>Messages</Title>}
       content={<ListBox />}
+      background={false}
       bottom={<NavigationBar />}
     />
   );

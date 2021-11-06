@@ -21,6 +21,7 @@ const Friends = () => {
         </Wrapper>
       }
       content={<FriendsList />}
+      background={false}
       bottom={<NavigationBar />}
     />
   );

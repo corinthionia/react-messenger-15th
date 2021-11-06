@@ -29,6 +29,7 @@ const Setting = () => {
           </Wrapper>
         </Box>
       ))}
+      background={false}
       bottom={<NavigationBar />}
     />
   );

@@ -27,6 +27,7 @@ const Chat = () => {
     <Template
       header={<ChatHeader changeUser={changeUser} currentUser={currentUser} />}
       content={<ChatBox chatList={chatList} userId={userId} />}
+      background={'#e9effd'}
       bottom={<InputForm chatList={chatList} currentUser={currentUser} />}
     />
   );
