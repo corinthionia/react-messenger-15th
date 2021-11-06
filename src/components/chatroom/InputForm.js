@@ -25,7 +25,7 @@ const InputForm = ({ chatList, currentUser }) => {
     } else {
       alert('Please enter a message.');
     }
-
+    console.log(chatList);
     setInputText('');
   };
 

@@ -23,7 +23,7 @@ const Chat = () => {
   return (
     <Template
       header={<ChatHeader changeUser={changeUser} currentUser={currentUser} />}
-      content={<ChatBox chatList={chatList} />}
+      content={<ChatBox chatList={chatList} userId={userId} />}
       bottom={<InputForm chatList={chatList} currentUser={currentUser} />}
     />
   );

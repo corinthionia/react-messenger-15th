@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const ChatHeader = ({ changeUser, currentUser }) => {
   return (
-    <>
-      <Link to={'/chatList'}>
-        <BackBtn>
+    <Wrapper>
+      <BackBtn>
+        <Link to={'/chatList'}>
           <FiChevronLeft />
-        </BackBtn>
-      </Link>
+        </Link>
+      </BackBtn>
       <ProfileWrapper onClick={changeUser}>
         <ProfileImg
           src={
@@ -23,14 +23,25 @@ const ChatHeader = ({ changeUser, currentUser }) => {
         </TextWrapper>
       </ProfileWrapper>
       <Blank />
-    </>
+    </Wrapper>
   );
 };
 
+const Wrapper = styled.section`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  align-items: center;
+`;
+
 const BackBtn = styled.button`
-  width: 10%;
-  height: 50%;
-  font-size: 1.5rem;
+  width: 1rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
 
   margin: 0 1rem;
 
@@ -43,14 +54,15 @@ const BackBtn = styled.button`
 `;
 
 const Blank = styled.div`
-  width: 10%;
-  height: 50%;
+  width: 1rem;
+  height: 2.5rem;
+
   margin: 0 1rem;
 `;
 
 const ProfileWrapper = styled.section`
-  width: 45%;
-  height: 75%;
+  width: 10rem;
+  height: 5rem;
 
   display: flex;
   align-items: center;
@@ -78,7 +90,8 @@ const TextWrapper = styled.div`
 `;
 
 const ProfileName = styled.span`
-  color: #3a3a3a;
+  color: #263256;
+  font-weight: 600;
 `;
 
 const ProfileText = styled.span`

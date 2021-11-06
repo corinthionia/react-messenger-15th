@@ -19,6 +19,8 @@ const Wrapper = styled.section`
 
   overflow: hidden;
 
+  background: #e9effd;
+
   border: 0.1rem solid #efefef;
   border-radius: 2.5rem;
 `;
@@ -30,12 +32,16 @@ const Header = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  color: #263256;
   border-bottom: 0.1rem solid #efefef;
 `;
 
 const Content = styled.section`
   overflow: auto;
   height: 75%;
+
+  border-radius: 2.5rem 2.5rem 0 0;
+  background: #ffffff;
 
   &::-webkit-scrollbar {
     width: 0.75rem;
@@ -64,6 +70,7 @@ const Bottom = styled.form`
   bottom: 0;
 
   border-top: 0.1rem solid #efefef;
+  background: #ffffff;
 
   display: flex;
   align-items: center;
