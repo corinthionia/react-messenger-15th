@@ -21,8 +21,10 @@ const Wrapper = styled.section`
 
   background: ${(props) => props.background || '#ffffff'};
 
-  border: 0.1rem solid #efefef;
-  border-radius: 2.5rem;
+  @media screen and (min-width: 405px) {
+    border: 0.1rem solid #efefef;
+    border-radius: 2.5rem;
+  }
 `;
 
 const Header = styled.header`
