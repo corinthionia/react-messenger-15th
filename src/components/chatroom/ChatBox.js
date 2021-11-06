@@ -4,7 +4,7 @@ import MyChat from './MyChat';
 import OthersChat from './OthersChat';
 
 const ChatBox = ({ chatList, userId }) => {
-  const filteredChatList = chatList[parseInt(userId - 1)];
+  const filteredChatList = chatList[parseInt(userId) - 1];
 
   return (
     <Wrapper>

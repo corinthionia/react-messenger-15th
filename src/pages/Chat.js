@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { useParams } from 'react-router';
+import { useState } from 'react';
 
 import ChatBox from '../components/chatroom/ChatBox';
 import InputForm from '../components/chatroom/InputForm';
@@ -8,16 +8,19 @@ import ChatHeader from '../components/chatroom/ChatHeader';
 
 import me from '../assets/data/me.json';
 import users from '../assets/data/users.json';
+import chat from '../assets/data/chat.json';
 
 const Chat = () => {
   const { userId } = useParams();
   const [currentUser, setCurrentUser] = useState(me);
 
-  // local storage에 저장된 데이터(갱신된 chatList)를 불러와서 chatList에 저장
-  const chatList = JSON.parse(localStorage.getItem('chats'));
+  // 테스트...
+  const chatList = chat;
 
   const changeUser = () => {
-    currentUser.id ? setCurrentUser(me) : setCurrentUser(users[userId - 1]);
+    currentUser.id
+      ? setCurrentUser(me)
+      : setCurrentUser(users[parseInt(userId) - 1]);
   };
 
   return (

@@ -10,9 +10,7 @@ const ListBox = () => {
         <StyledLink to={'/chat/' + user.id} key={user.id}>
           <Wrapper>
             <ProfileImg
-              src={
-                require('../../assets/profileImg/' + user.id + '.jpg').default
-              }
+              src={require('../../assets/profileImg/' + user.img).default}
             />
             <TextWrapper>
               <Name>{user.name}</Name>

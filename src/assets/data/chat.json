@@ -84,25 +84,8 @@
     "userId": 4,
     "message": [
       {
-        "date": 1011,
-        "sender": 4,
-        "text": "가벼운 향수도 뿌리고 고이 모셔 놓은 조던도 꺼냈는데 그때 걸려온 너의 CALL",
-        "isDoubleClicked": true
-      },
-      {
-        "date": 1012,
-        "sender": 0,
-        "text": "나 오늘 못 나갈 것 같애",
-        "isDoubleClicked": false
-      }
-    ]
-  },
-  {
-    "userId": 5,
-    "message": [
-      {
         "date": 1013,
-        "sender": 5,
+        "sender": 4,
         "text": "조금 답답해 너와 눈 맞출 때 난 그 깊은 곳까지 들여다보고 싶은데",
         "isDoubleClicked": true
       },
@@ -116,6 +99,23 @@
         "date": 1015,
         "sender": 0,
         "text": "내 맘 아득해지는걸",
+        "isDoubleClicked": false
+      }
+    ]
+  },
+  {
+    "userId": 5,
+    "message": [
+      {
+        "date": 1021,
+        "sender": 5,
+        "text": "You knew that I was no good for you",
+        "isDoubleClicked": false
+      },
+      {
+        "date": 1022,
+        "sender": 0,
+        "text": "I hope that I could be seemed really fine with you leaving",
         "isDoubleClicked": false
       }
     ]
@@ -140,6 +140,23 @@
         "sender": 0,
         "text": "그 순간 내가 기억할 만한 건 잠에서 깬 나일 것 같어",
         "isDoubleClicked": true
+      }
+    ]
+  },
+  {
+    "userId": 7,
+    "message": [
+      {
+        "date": 1019,
+        "sender": 7,
+        "text": "가벼운 향수도 뿌리고 고이 모셔 놓은 조던도 꺼냈는데 그때 걸려온 너의 CALL",
+        "isDoubleClicked": true
+      },
+      {
+        "date": 1020,
+        "sender": 0,
+        "text": "나 오늘 못 나갈 것 같애",
+        "isDoubleClicked": false
       }
     ]
   }

@@ -17,22 +17,29 @@
     "img": "3.jpg",
     "statusMsg": "Circles"
   },
+
   {
     "id": 4,
-    "name": "Heize",
+    "name": "Baek Hyun",
     "img": "4.jpg",
-    "statusMsg": "And July (여름이었다...~)"
+    "statusMsg": "Bungee"
   },
   {
     "id": 5,
-    "name": "Baek Hyun",
+    "name": "Yerin",
     "img": "5.jpg",
-    "statusMsg": "Bungee"
+    "statusMsg": "0310"
   },
   {
     "id": 6,
     "name": "Beenzino",
     "img": "6.jpg",
     "statusMsg": "Always Awake"
+  },
+  {
+    "id": 7,
+    "name": "Heize",
+    "img": "7.jpg",
+    "statusMsg": "And July"
   }
 ]
