@@ -11,13 +11,10 @@ import users from '../assets/data/users.json';
 import chat from '../assets/data/chat.json';
 
 const Chat = () => {
-  const [chats, setChats] = useState(chat);
+  const [chatList, setChatList] = useState(chat);
 
   const { userId } = useParams();
   const [currentUser, setCurrentUser] = useState(me);
-
-  // 테스트...
-  const chatList = chats;
 
   const changeUser = () => {
     currentUser.id
@@ -28,9 +25,21 @@ const Chat = () => {
   return (
     <Template
       header={<ChatHeader changeUser={changeUser} currentUser={currentUser} />}
-      content={<ChatBox chatList={chatList} userId={userId} />}
+      content={
+        <ChatBox
+          chatList={chatList}
+          setChatList={setChatList}
+          userId={userId}
+        />
+      }
       background={'#e9effd'}
-      bottom={<InputForm chatList={chatList} currentUser={currentUser} />}
+      bottom={
+        <InputForm
+          chatList={chatList}
+          setChatList={setChatList}
+          currentUser={currentUser}
+        />
+      }
     />
   );
 };

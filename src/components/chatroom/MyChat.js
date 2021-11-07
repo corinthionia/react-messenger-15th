@@ -26,7 +26,7 @@ const ProfileImg = styled.img`
 `;
 
 const ChatText = styled.span`
-  max-width: 12.5rem;
+  max-width: 10rem;
   font-size: 0.5rem;
 
   color: white;

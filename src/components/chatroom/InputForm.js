@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router';
 import styled from 'styled-components';
 
 // 아직 수정 중입니다...
-
-const InputForm = ({ chatList, currentUser }) => {
-  const [inputText, setInputText] = useState('');
+const InputForm = ({ chatList, setChatList, currentUser }) => {
   const { userId } = useParams();
+
+  const [inputText, setInputText] = useState('');
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
@@ -23,12 +23,25 @@ const InputForm = ({ chatList, currentUser }) => {
         isDoubleClicked: false,
       };
 
-      // 이걸 push 말고 state라든가 다른 걸 쓰는 방법이 있을까요?
-      chatList[parseInt(userId) - 1].message.push(msg);
+      // 객체 배열 다루기 왜케 어렵나요
+      // 좀더 멋있게 쓰고 싶은데 방법을 모르겠어요 이거 보시는 분 헬프 미,,,
+      setChatList(
+        chatList
+          .slice(0, parseInt(userId) - 1)
+          .concat([
+            {
+              userId: parseInt(userId),
+              message: chatList
+                .slice(parseInt(userId) - 1, parseInt(userId))[0]
+                .message.concat(msg),
+            },
+          ])
+          .concat(chatList.slice(parseInt(userId)))
+      );
     } else {
       alert('Please enter a message.');
     }
-    console.log(chatList);
+
     setInputText('');
   };
 
