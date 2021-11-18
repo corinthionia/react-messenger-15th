@@ -7,8 +7,9 @@ import {
   FcLock,
 } from 'react-icons/fc';
 
-import Template from '../components/template/Template';
-import NavigationBar from '../components/template/NavigationBar';
+import Template from '../base/Template';
+
+import NavigationBar from '../base/NavigationBar';
 
 const Setting = () => {
   const settingMenu = [
@@ -46,12 +47,10 @@ const Box = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
-  margin-top: 1rem;
 `;
 
 const Wrapper = styled.section`
-  height: 5rem;
+  height: 4.5rem;
 
   display: flex;
   flex-direction: row;

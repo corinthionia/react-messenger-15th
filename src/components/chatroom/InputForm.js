@@ -23,7 +23,6 @@ const InputForm = ({ chatList, setChatList, currentUser }) => {
         isDoubleClicked: false,
       };
 
-      // 객체 배열 다루기 왜케 어렵나요
       // 좀더 멋있게 쓰고 싶은데 방법을 모르겠어요 이거 보시는 분 헬프 미,,,
       setChatList(
         chatList

@@ -67,10 +67,16 @@
     "userId": 3,
     "message": [
       {
-        "date": 1009,
+        "date": 1019,
         "sender": 3,
-        "text": "Seasons change and our love went cold",
+        "text": "가벼운 향수도 뿌리고 고이 모셔 놓은 조던도 꺼냈는데 그때 걸려온 너의 CALL",
         "isDoubleClicked": true
+      },
+      {
+        "date": 1020,
+        "sender": 0,
+        "text": "나 오늘 못 나갈 것 같애",
+        "isDoubleClicked": false
       }
     ]
   },
@@ -134,23 +140,6 @@
         "sender": 0,
         "text": "그 순간 내가 기억할 만한 건 잠에서 깬 나일 것 같어",
         "isDoubleClicked": true
-      }
-    ]
-  },
-  {
-    "userId": 7,
-    "message": [
-      {
-        "date": 1019,
-        "sender": 7,
-        "text": "가벼운 향수도 뿌리고 고이 모셔 놓은 조던도 꺼냈는데 그때 걸려온 너의 CALL",
-        "isDoubleClicked": true
-      },
-      {
-        "date": 1020,
-        "sender": 0,
-        "text": "나 오늘 못 나갈 것 같애",
-        "isDoubleClicked": false
       }
     ]
   }

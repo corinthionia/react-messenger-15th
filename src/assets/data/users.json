@@ -13,9 +13,9 @@
   },
   {
     "id": 3,
-    "name": "Post Malone",
-    "img": "3.jpg",
-    "statusMsg": "Circles"
+    "name": "Heize",
+    "img": "7.jpg",
+    "statusMsg": "And July"
   },
 
   {
@@ -35,11 +35,5 @@
     "name": "Beenzino",
     "img": "6.jpg",
     "statusMsg": "Always Awake"
-  },
-  {
-    "id": 7,
-    "name": "Heize",
-    "img": "7.jpg",
-    "statusMsg": "And July"
   }
 ]

@@ -3,20 +3,20 @@ import { useState } from 'react';
 
 import ChatBox from '../components/chatroom/ChatBox';
 import InputForm from '../components/chatroom/InputForm';
-import Template from '../components/template/Template';
+import Template from '../base/Template';
 import ChatHeader from '../components/chatroom/ChatHeader';
 
 import me from '../assets/data/me.json';
 import users from '../assets/data/users.json';
 import chat from '../assets/data/chat.json';
 
-const Chat = () => {
+const ChatRoom = () => {
   const [chatList, setChatList] = useState(chat);
 
   const { userId } = useParams();
   const [currentUser, setCurrentUser] = useState(me);
 
-  const changeUser = () => {
+  const handleChangeUser = () => {
     currentUser.id
       ? setCurrentUser(me)
       : setCurrentUser(users[parseInt(userId) - 1]);
@@ -24,7 +24,12 @@ const Chat = () => {
 
   return (
     <Template
-      header={<ChatHeader changeUser={changeUser} currentUser={currentUser} />}
+      header={
+        <ChatHeader
+          handleChangeUser={handleChangeUser}
+          currentUser={currentUser}
+        />
+      }
       content={
         <ChatBox
           chatList={chatList}
@@ -44,4 +49,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default ChatRoom;

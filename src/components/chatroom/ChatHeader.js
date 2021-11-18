@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FiChevronLeft } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
-const ChatHeader = ({ changeUser, currentUser }) => {
+const ChatHeader = ({ handleChangeUser, currentUser }) => {
   return (
     <Wrapper>
       <BackBtn>
@@ -10,12 +10,9 @@ const ChatHeader = ({ changeUser, currentUser }) => {
           <FiChevronLeft />
         </Link>
       </BackBtn>
-      <ProfileWrapper onClick={changeUser}>
+      <ProfileWrapper onClick={handleChangeUser}>
         <ProfileImg
-          src={
-            require('../../assets/profileImg/' + currentUser.id + '.jpg')
-              .default
-          }
+          src={require(`../../assets/profileImg/${currentUser.id}.jpg`).default}
         />
         <TextWrapper>
           <ProfileName>{currentUser.name}</ProfileName>
@@ -74,8 +71,8 @@ const ProfileWrapper = styled.section`
 `;
 
 const ProfileImg = styled.img`
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
 
   border-radius: 50%;
 

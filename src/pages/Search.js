@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-import Template from '../components/template/Template';
-import NavigationBar from '../components/template/NavigationBar';
+import Template from '../base/Template';
+
+import NavigationBar from '../base/NavigationBar';
 import SearchUser from '../components/search/SearchUser';
 
 const Search = () => {

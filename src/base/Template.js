@@ -11,8 +11,10 @@ const Template = ({ header, content, background, bottom }) => {
 };
 
 const Wrapper = styled.section`
-  height: 42.5rem;
-  width: 20rem;
+  width: 42.5vh;
+  height: 90vh;
+  min-width: 290px;
+  min-height: 580px;
 
   position: relative;
   margin: 0;
@@ -28,29 +30,25 @@ const Wrapper = styled.section`
 `;
 
 const Header = styled.header`
-  height: 12.5%;
+  height: 15%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   color: #263256;
-  border-bottom: 0.1rem solid #efefef;
 `;
 
 const Content = styled.section`
-  overflow: auto;
-  height: 75%;
+  height: 72.5%;
+
+  overflow-x: hidden;
 
   border-radius: 2.5rem 2.5rem 0 0;
   background: #ffffff;
 
   &::-webkit-scrollbar {
     width: 0.75rem;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: none;
   }
 
   :hover {

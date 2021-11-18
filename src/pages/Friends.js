@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 import { BsSearch } from 'react-icons/bs';
 
+import Template from '../base/Template';
+import NavigationBar from '../base/NavigationBar';
 import FriendsList from '../components/friends/FriendsList';
-import NavigationBar from '../components/template/NavigationBar';
-import Template from '../components/template/Template';
 
 const Friends = () => {
   return (
@@ -14,9 +14,7 @@ const Friends = () => {
         <Wrapper>
           <Title>Friends</Title>
           <Link to="/search">
-            <SearchBtn>
-              <BsSearch />
-            </SearchBtn>
+            <SearchBtn />
           </Link>
         </Wrapper>
       }
@@ -28,18 +26,18 @@ const Friends = () => {
 };
 
 const Wrapper = styled.section`
+  width: 100%;
+  height: 100%;
+
   display: flex;
   flex-direction: row;
 `;
 
-const SearchBtn = styled.button`
-  width: 2rem;
-  height: 2rem;
+const SearchBtn = styled(BsSearch)`
+  width: 0.9rem;
+  height: 0.9rem;
 
-  margin: 0.5rem 7.5rem;
-
-  background: none;
-  border: none;
+  margin: 1rem 4rem;
 
   &:hover {
     cursor: pointer;
