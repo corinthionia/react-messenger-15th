@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 import NavigationBar from '../base/NavigationBar';
 import Template from '../base/Template';
-import ListBox from '../components/chatlist/ListBox';
+import ChatListBox from '../components/chatlist/ChatListBox';
 
 const ChatList = () => {
   return (
     <Template
       header={<Title>Messages</Title>}
-      content={<ListBox />}
-      background={false}
+      content={<ChatListBox />}
+      backgroundColor={'#ffffff'}
       bottom={<NavigationBar />}
     />
   );

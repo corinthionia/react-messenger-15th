@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import styled from 'styled-components';
 
@@ -7,7 +7,7 @@ import users from '../../assets/data/users.json';
 const SearchUser = () => {
   const [inputText, setInputText] = useState('d');
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value);
   };
 
@@ -21,9 +21,7 @@ const SearchUser = () => {
         {results.map((user) => (
           <Wrapper key={user.id}>
             <ProfileImg
-              src={
-                require('../../assets/profileImg/' + user.id + '.jpg').default
-              }
+              src={require(`../../assets/profileImg/${user.id}.jpg`).default}
             />
             <TextWrapper>
               <Name>{user.name}</Name>

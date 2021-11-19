@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 
-const List = ({ user, text }) => {
+type User = {
+  id: number;
+  name: string;
+  statusMsg: string;
+};
+
+type ListProps = {
+  user: User;
+  text: string;
+};
+
+const List = ({ user, text }: ListProps) => {
   const { id, name } = user;
 
   return (

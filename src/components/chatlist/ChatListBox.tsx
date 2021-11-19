@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import List from '../../base/List';
 import users from '../../assets/data/users.json';
 
-const ListBox = () => {
+const ChatListBox = () => {
   return (
     <>
       {users.map((user) => (
@@ -20,4 +20,4 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-export default ListBox;
+export default ChatListBox;

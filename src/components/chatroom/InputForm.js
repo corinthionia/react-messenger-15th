@@ -66,20 +66,16 @@ const InputForm = ({ chatList, setChatList, currentUser }) => {
 const Input = styled.input`
   height: 45%;
   width: 60%;
-
   border: 0.1rem solid #efefef;
   border-radius: 1.5rem;
-
   padding: 0 0.5rem;
 `;
 
 const AddBtn = styled.button`
   height: 50%;
   width: 10%;
-
   border: none;
   background: none;
-
   :hover {
     cursor: pointer;
   }

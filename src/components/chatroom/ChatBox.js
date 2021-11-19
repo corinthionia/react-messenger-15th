@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+// 아직 수정 중입니다...
 const ChatBox = ({ chatList, userId }) => {
   const filteredChatList = chatList[parseInt(userId) - 1];
   return (
@@ -23,25 +24,20 @@ const ChatBox = ({ chatList, userId }) => {
 const Wrapper = styled.section`
   display: flex;
   flex-direction: ${(props) => (props.sender === 0 ? 'row-reverse' : 'row')};
-
   margin: 5% 0;
 `;
 
 const ProfileImg = styled.img`
   width: 12.5%;
   height: 12.5%;
-
   margin: 0 5%;
-
   border-radius: 50%;
-
   object-fit: cover;
 `;
 
 const ChatBubble = styled.section`
   max-width: 60%;
   margin-top: 5%;
-
   ${(props) =>
     props.sender === 0
       ? css`
@@ -61,10 +57,8 @@ const TextWrapper = styled.div`
 const ChatText = styled.span`
   font-size: 10px;
   -webkit-transform: scale(0.5);
-
   text-align: justify;
   word-break: break-all;
-
   -webkit-user-select: none;
   color: ${(props) => (props.sender === 0 ? '#ffffff' : '#000000')};
 `;

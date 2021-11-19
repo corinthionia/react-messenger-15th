@@ -19,7 +19,7 @@ const Friends = () => {
         </Wrapper>
       }
       content={<FriendsList />}
-      background={false}
+      backgroundColor={'#ffffff'}
       bottom={<NavigationBar />}
     />
   );

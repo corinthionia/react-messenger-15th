@@ -2,7 +2,12 @@ import styled from 'styled-components';
 import { FiChevronLeft } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
-const ChatHeader = ({ handleChangeUser, currentUser }) => {
+type ChatHeaderProps = {
+  handleChangeUser: any;
+  currentUser: any;
+};
+
+const ChatHeader = ({ handleChangeUser, currentUser }: ChatHeaderProps) => {
   return (
     <Wrapper>
       <BackBtn>

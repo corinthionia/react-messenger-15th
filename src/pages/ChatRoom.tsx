@@ -13,7 +13,7 @@ import chat from '../assets/data/chat.json';
 const ChatRoom = () => {
   const [chatList, setChatList] = useState(chat);
 
-  const { userId } = useParams();
+  const { userId }: any = useParams();
   const [currentUser, setCurrentUser] = useState(me);
 
   const handleChangeUser = () => {
@@ -30,14 +30,8 @@ const ChatRoom = () => {
           currentUser={currentUser}
         />
       }
-      content={
-        <ChatBox
-          chatList={chatList}
-          setChatList={setChatList}
-          userId={userId}
-        />
-      }
-      background={'#e9effd'}
+      content={<ChatBox chatList={chatList} userId={userId} />}
+      backgroundColor={'#e9effd'}
       bottom={
         <InputForm
           chatList={chatList}

@@ -30,7 +30,7 @@ const Setting = () => {
           </Wrapper>
         </Box>
       ))}
-      background={false}
+      backgroundColor={'#ffffff'}
       bottom={<NavigationBar />}
     />
   );

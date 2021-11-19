@@ -2,38 +2,32 @@
   {
     "id": 1,
     "name": "IU",
-    "img": "1.jpg",
     "statusMsg": "Blueming"
   },
   {
     "id": 2,
     "name": "Rose",
-    "img": "2.jpg",
     "statusMsg": "Gone"
   },
   {
     "id": 3,
     "name": "Heize",
-    "img": "7.jpg",
     "statusMsg": "And July"
   },
 
   {
     "id": 4,
     "name": "Baek Hyun",
-    "img": "4.jpg",
     "statusMsg": "Bungee"
   },
   {
     "id": 5,
     "name": "Yerin",
-    "img": "5.jpg",
     "statusMsg": "0310"
   },
   {
     "id": 6,
     "name": "Beenzino",
-    "img": "6.jpg",
     "statusMsg": "Always Awake"
   }
 ]

@@ -1,8 +1,24 @@
 import styled from 'styled-components';
 
-const Template = ({ header, content, background, bottom }) => {
+type TemplateProps = {
+  header?: object;
+  content?: object;
+  backgroundColor?: string;
+  bottom?: object;
+};
+
+type BgColor = {
+  backgroundColor: any;
+};
+
+const Template = ({
+  header,
+  content,
+  backgroundColor,
+  bottom,
+}: TemplateProps) => {
   return (
-    <Wrapper background={background}>
+    <Wrapper backgroundColor={backgroundColor}>
       <Header>{header}</Header>
       <Content>{content}</Content>
       <Bottom>{bottom}</Bottom>
@@ -10,7 +26,7 @@ const Template = ({ header, content, background, bottom }) => {
   );
 };
 
-const Wrapper = styled.section`
+const Wrapper = styled.section<BgColor>`
   width: 42.5vh;
   height: 90vh;
   min-width: 290px;
@@ -21,7 +37,7 @@ const Wrapper = styled.section`
 
   overflow: hidden;
 
-  background: ${(props) => props.background || '#ffffff'};
+  background: ${(props) => props.backgroundColor};
 
   @media screen and (min-width: 405px) {
     border: 0.1rem solid #efefef;
