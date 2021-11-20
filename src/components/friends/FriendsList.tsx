@@ -4,15 +4,15 @@ import styled from 'styled-components';
 import me from '../../assets/data/me.json';
 import users from '../../assets/data/users.json';
 
-import List from '../../base/List';
+import CreateList from '../../base/CreateList';
 
 const FriendsList = () => {
   return (
     <>
-      <List user={me} text={me.statusMsg} />
+      <CreateList user={me} text={me.statusMsg} />
       {users.map((user) => (
         <StyledLink to={`/chat/${user.id}`}>
-          <List user={user} text={user.statusMsg} key={user.id} />
+          <CreateList user={user} text={user.statusMsg} key={user.id} />
         </StyledLink>
       ))}
     </>

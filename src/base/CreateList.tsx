@@ -12,7 +12,7 @@ type ListProps = {
 };
 
 // 친구 목록, 채팅 목록 등 리스트를 만들어 주는 컴포넌트
-const List = ({ user, text }: ListProps) => {
+const CreateList = ({ user, text }: ListProps) => {
   const { id, name } = user;
 
   return (
@@ -66,4 +66,4 @@ const Text = styled.span`
   color: #c9cdd8;
 `;
 
-export default List;
+export default CreateList;
