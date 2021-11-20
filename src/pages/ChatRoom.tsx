@@ -14,6 +14,7 @@ const ChatRoom = () => {
   const [chatList, setChatList] = useState(chat);
 
   const { userId }: any = useParams();
+
   const [currentUser, setCurrentUser] = useState(me);
 
   const handleChangeUser = () => {

@@ -1,18 +1,24 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import styled from 'styled-components';
 
+type InputFormProps = {
+  chatList: any;
+  setChatList: any;
+  currentUser: any;
+};
+
 // 아직 수정 중입니다...
-const InputForm = ({ chatList, setChatList, currentUser }) => {
-  const { userId } = useParams();
+const InputForm = ({ chatList, setChatList, currentUser }: InputFormProps) => {
+  const { userId }: any = useParams();
 
   const [inputText, setInputText] = useState('');
-
-  const handleInputChange = (e) => {
+  console.log(currentUser);
+  const handleInputChange = (e: any) => {
     setInputText(e.target.value);
   };
 
-  const addNewMsg = (e) => {
+  const addNewMsg = (e: any) => {
     e.preventDefault();
 
     if (inputText) {

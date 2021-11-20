@@ -1,11 +1,19 @@
 import styled, { css } from 'styled-components';
 
-// 아직 수정 중입니다...
-const ChatBox = ({ chatList, userId }) => {
+type ChatBoxProps = {
+  chatList: any;
+  userId: string;
+};
+
+type mapProps = {
+  sender: number;
+};
+
+const ChatBox = ({ chatList, userId }: ChatBoxProps) => {
   const filteredChatList = chatList[parseInt(userId) - 1];
   return (
     <>
-      {filteredChatList.message.map((chat) => (
+      {filteredChatList.message.map((chat: any) => (
         <Wrapper sender={chat.sender} key={chat.date}>
           <ProfileImg
             src={require(`../../assets/profileImg/${chat.sender}.jpg`).default}
@@ -21,23 +29,28 @@ const ChatBox = ({ chatList, userId }) => {
   );
 };
 
-const Wrapper = styled.section`
+const Wrapper = styled.section<mapProps>`
   display: flex;
   flex-direction: ${(props) => (props.sender === 0 ? 'row-reverse' : 'row')};
+
   margin: 5% 0;
 `;
 
 const ProfileImg = styled.img`
   width: 12.5%;
   height: 12.5%;
+
   margin: 0 5%;
+
   border-radius: 50%;
+
   object-fit: cover;
 `;
 
-const ChatBubble = styled.section`
+const ChatBubble = styled.section<mapProps>`
   max-width: 60%;
   margin-top: 5%;
+
   ${(props) =>
     props.sender === 0
       ? css`
@@ -54,11 +67,13 @@ const TextWrapper = styled.div`
   -webkit-transform: scale(0.8);
 `;
 
-const ChatText = styled.span`
+const ChatText = styled.span<mapProps>`
   font-size: 10px;
   -webkit-transform: scale(0.5);
+
   text-align: justify;
   word-break: break-all;
+
   -webkit-user-select: none;
   color: ${(props) => (props.sender === 0 ? '#ffffff' : '#000000')};
 `;
