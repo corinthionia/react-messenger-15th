@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router';
 import styled from 'styled-components';
+import { useParams } from 'react-router';
+
+import useInput from '../../hooks/useInput';
 
 type InputFormProps = {
   chatList: any;
@@ -11,11 +12,7 @@ type InputFormProps = {
 const InputForm = ({ chatList, setChatList, currentUser }: InputFormProps) => {
   const { userId }: any = useParams();
 
-  const [inputText, setInputText] = useState('');
-
-  const handleInputChange = (e: any) => {
-    setInputText(e.target.value);
-  };
+  const [inputText, setInputText, handleInputChange] = useInput('');
 
   const addNewMsg = (e: any) => {
     e.preventDefault();
@@ -71,16 +68,20 @@ const InputForm = ({ chatList, setChatList, currentUser }: InputFormProps) => {
 const Input = styled.input`
   height: 45%;
   width: 60%;
+
+  padding: 0 0.5rem;
+
   border: 0.1rem solid #efefef;
   border-radius: 1.5rem;
-  padding: 0 0.5rem;
 `;
 
 const AddBtn = styled.button`
   height: 50%;
   width: 10%;
+
   border: none;
   background: none;
+
   :hover {
     cursor: pointer;
   }

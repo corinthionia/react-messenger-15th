@@ -1,14 +1,11 @@
-import { useState } from 'react';
 import styled from 'styled-components';
+
+import useInput from '../../hooks/useInput';
 
 import users from '../../assets/data/users.json';
 
 const SearchUser = () => {
-  const [inputText, setInputText] = useState('');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputText(e.target.value);
-  };
+  const [inputText, setInputText, handleInputChange] = useInput('');
 
   const results = users.filter(
     (user) => inputText && user.name.includes(inputText)
