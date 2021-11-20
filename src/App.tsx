@@ -6,7 +6,7 @@ import Setting from './pages/Setting';
 import ChatList from './pages/ChatList';
 import ChatRoom from './pages/ChatRoom';
 
-function App(): any {
+function App() {
   return (
     <BrowserRouter>
       <Routes>

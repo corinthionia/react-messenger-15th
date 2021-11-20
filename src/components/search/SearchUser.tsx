@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-
+import { useState } from 'react';
 import styled from 'styled-components';
 
 import users from '../../assets/data/users.json';
 
 const SearchUser = () => {
-  const [inputText, setInputText] = useState('d');
+  const [inputText, setInputText] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value);
@@ -81,7 +80,6 @@ const ProfileImg = styled.img`
   padding: 1.25rem 1rem;
 
   border-radius: 50%;
-
   object-fit: cover;
 `;
 

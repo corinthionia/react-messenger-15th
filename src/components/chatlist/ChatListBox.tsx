@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import List from '../../base/List';
 import users from '../../assets/data/users.json';
 
+// 채팅 목록이 나타나는 부분
 const ChatListBox = () => {
   return (
     <>

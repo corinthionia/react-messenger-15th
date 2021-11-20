@@ -1,14 +1,15 @@
 import styled, { css } from 'styled-components';
 
 type ChatBoxProps = {
-  chatList: any;
-  userId: string;
+  chatList: [{ userId: string; message: object[] }];
+  userId: any;
 };
 
-type mapProps = {
+type Sender = {
   sender: number;
 };
 
+// 채팅 내용이 표시되는 부분
 const ChatBox = ({ chatList, userId }: ChatBoxProps) => {
   const filteredChatList = chatList[parseInt(userId) - 1];
   return (
@@ -29,7 +30,7 @@ const ChatBox = ({ chatList, userId }: ChatBoxProps) => {
   );
 };
 
-const Wrapper = styled.section<mapProps>`
+const Wrapper = styled.section<Sender>`
   display: flex;
   flex-direction: ${(props) => (props.sender === 0 ? 'row-reverse' : 'row')};
 
@@ -47,7 +48,7 @@ const ProfileImg = styled.img`
   object-fit: cover;
 `;
 
-const ChatBubble = styled.section<mapProps>`
+const ChatBubble = styled.section<Sender>`
   max-width: 60%;
   margin-top: 5%;
 
@@ -67,7 +68,7 @@ const TextWrapper = styled.div`
   -webkit-transform: scale(0.8);
 `;
 
-const ChatText = styled.span<mapProps>`
+const ChatText = styled.span<Sender>`
   font-size: 10px;
   -webkit-transform: scale(0.5);
 

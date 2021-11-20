@@ -11,6 +11,7 @@ type ListProps = {
   text: string;
 };
 
+// 친구 목록, 채팅 목록 등 리스트를 만들어 주는 컴포넌트
 const List = ({ user, text }: ListProps) => {
   const { id, name } = user;
 

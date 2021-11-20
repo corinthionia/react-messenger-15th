@@ -3,8 +3,8 @@ import { FiChevronLeft } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 type ChatHeaderProps = {
-  handleChangeUser: any;
-  currentUser: any;
+  handleChangeUser: React.MouseEventHandler<HTMLElement>;
+  currentUser: { id: number; name: string; statusMsg: string };
 };
 
 const ChatHeader = ({ handleChangeUser, currentUser }: ChatHeaderProps) => {

@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
 type TemplateProps = {
-  header?: object;
-  content?: object;
-  backgroundColor?: string;
-  bottom?: object;
+  header: object;
+  content: object;
+  backgroundColor: string;
+  bottom: object;
 };
 
 type BgColor = {
-  backgroundColor: any;
+  backgroundColor: string;
 };
 
+// base UI
 const Template = ({
   header,
   content,
@@ -48,11 +49,11 @@ const Wrapper = styled.section<BgColor>`
 const Header = styled.header`
   height: 15%;
 
+  color: #263256;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  color: #263256;
 `;
 
 const Content = styled.section`
@@ -82,11 +83,8 @@ const Bottom = styled.form`
   height: 12.5%;
   width: 100%;
 
-  position: abolute;
-  bottom: 0;
-
-  border-top: 0.1rem solid #efefef;
   background: #ffffff;
+  border-top: 0.1rem solid #efefef;
 
   display: flex;
   align-items: center;

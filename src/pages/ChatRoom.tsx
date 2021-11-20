@@ -1,9 +1,9 @@
 import { useParams } from 'react-router';
 import { useState } from 'react';
 
+import Template from '../base/Template';
 import ChatBox from '../components/chatroom/ChatBox';
 import InputForm from '../components/chatroom/InputForm';
-import Template from '../base/Template';
 import ChatHeader from '../components/chatroom/ChatHeader';
 
 import me from '../assets/data/me.json';
@@ -11,7 +11,7 @@ import users from '../assets/data/users.json';
 import chat from '../assets/data/chat.json';
 
 const ChatRoom = () => {
-  const [chatList, setChatList] = useState(chat);
+  const [chatList, setChatList]: any = useState(chat);
 
   const { userId }: any = useParams();
 
