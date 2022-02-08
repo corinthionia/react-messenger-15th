@@ -4,6 +4,10 @@ export const Wrapper = styled.div`
   width: 42.5vw;
   height: 90vh;
   border: 1px solid #e2e2e2;
+
+  @media screen and (min-width: 768px) {
+    height: calc(var(--vh, 1vh) * 100);
+  }
 `;
 
 export const Header = styled.header`
