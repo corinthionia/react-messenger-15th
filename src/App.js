@@ -26,7 +26,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/chatlist" element={<ChatList />} />
         <Route path="/chatroom" element={<ChatRoom />} />
-        <Route path="setting" element={<Setting />} />
+        <Route path="/setting" element={<Setting />} />
       </Routes>
     </>
   );

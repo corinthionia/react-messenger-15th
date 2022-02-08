@@ -19,7 +19,7 @@ const NavBar = () => {
       </Menu>
 
       <Menu>
-        <Link to={"setting"}>
+        <Link to={"/setting"}>
           <BsGear />
         </Link>
       </Menu>
