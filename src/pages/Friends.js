@@ -1,16 +1,21 @@
 import {
-  Bottom,
   Content,
   Header,
+  HeaderTitle,
+  Icon,
   Wrapper,
 } from "../components/commons/Components";
+import NavBar from "../components/commons/NavBar";
 
 const Friends = () => {
   return (
     <Wrapper>
-      <Header></Header>
+      <Header>
+        <HeaderTitle>Friends</HeaderTitle>
+        <Icon />
+      </Header>
       <Content></Content>
-      <Bottom />
+      <NavBar />
     </Wrapper>
   );
 };

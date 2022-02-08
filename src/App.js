@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import GlobalStyle from "./styles/GlobalStyle";
+import { Routes, Route } from "react-router";
 
 import Friends from "./pages/Friends";
 import Search from "./pages/Search";
@@ -21,7 +21,6 @@ function App() {
 
   return (
     <>
-      <GlobalStyle />
       <Routes>
         <Route path="/" element={<Friends />} />
         <Route path="/search" element={<Search />} />

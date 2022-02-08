@@ -1,16 +1,19 @@
 import {
-  Bottom,
   Content,
   Header,
+  HeaderTitle,
   Wrapper,
 } from "../components/commons/Components";
+import NavBar from "../components/commons/NavBar";
 
 const ChatList = () => {
   return (
     <Wrapper>
-      <Header></Header>
+      <Header>
+        <HeaderTitle>Chat List</HeaderTitle>
+      </Header>
       <Content></Content>
-      <Bottom />
+      <NavBar />
     </Wrapper>
   );
 };
