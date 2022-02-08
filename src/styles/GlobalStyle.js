@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
+import "./FontStyle.css";
 
 const GlobalStyle = createGlobalStyle`
 ${normalize}
@@ -17,7 +18,6 @@ body {
 * {
     font-family: 'Pretendard', Arial;
     font-display: fallback;
-
 }
 
 :root {

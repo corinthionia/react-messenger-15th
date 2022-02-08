@@ -1,6 +1,12 @@
 import { useEffect } from "react";
 import GlobalStyle from "./styles/GlobalStyle";
 
+import Friends from "./pages/Friends";
+import Search from "./pages/Search";
+import ChatList from "./pages/ChatList";
+import ChatRoom from "./pages/ChatRoom";
+import Setting from "./pages/Setting";
+
 function App() {
   function setScreenSize() {
     document.documentElement.style.setProperty(
@@ -16,7 +22,13 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <div>하이</div>
+      <Routes>
+        <Route path="/" element={<Friends />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/chatlist" element={<ChatList />} />
+        <Route path="/chatroom" element={<ChatRoom />} />
+        <Route path="setting" element={<Setting />} />
+      </Routes>
     </>
   );
 }
