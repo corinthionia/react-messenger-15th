@@ -1,0 +1,22 @@
+import { createGlobalStyle } from "styled-components";
+import { normalize } from "styled-normalize";
+
+const GlobalStyle = createGlobalStyle`
+${normalize}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Pretendard', Arial;
+    font-display: fallback;
+  }
+
+:root {
+    --vh: 100%;
+}
+`;
+
+export default GlobalStyle;

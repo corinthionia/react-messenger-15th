@@ -1,10 +1,18 @@
-import React from 'react';
+import { useEffect } from "react";
 
 function App() {
-  return (
-    <div > 14기 프론트엔드 짱 =_=
-    </div>
-  );
+  function setScreenSize() {
+    document.documentElement.style.setProperty(
+      "--vh",
+      `${window.innerHeight * 0.01}px`
+    );
+  }
+
+  useEffect(() => {
+    setScreenSize();
+  });
+
+  return <div> 테스트 하하</div>;
 }
 
 export default App;
