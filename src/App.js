@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import GlobalStyle from "./styles/GlobalStyle";
 
 function App() {
   function setScreenSize() {
@@ -12,7 +13,12 @@ function App() {
     setScreenSize();
   });
 
-  return <div> 테스트 하하</div>;
+  return (
+    <>
+      <GlobalStyle />
+      <div>하이</div>
+    </>
+  );
 }
 
 export default App;
