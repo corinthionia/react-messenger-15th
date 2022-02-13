@@ -1,15 +1,18 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Chat = ({ userId, userName, lastMsg }) => {
   return (
     <Wrapper>
-      <InfoWrapper>
-        <ProfileImg src={`${process.env.PUBLIC_URL}/imgs/${userId}.jpg`} />
-        <TextWrapper>
-          <UserName>{userName}</UserName>
-          <LastMsg>{lastMsg}</LastMsg>
-        </TextWrapper>
-      </InfoWrapper>
+      <StyledLink to={`/chatroom/${userId}`}>
+        <InfoWrapper>
+          <ProfileImg src={`${process.env.PUBLIC_URL}/imgs/${userId}.jpg`} />
+          <TextWrapper>
+            <UserName>{userName}</UserName>
+            <LastMsg>{lastMsg}</LastMsg>
+          </TextWrapper>
+        </InfoWrapper>
+      </StyledLink>
     </Wrapper>
   );
 };
@@ -23,6 +26,14 @@ const Wrapper = styled.div`
   justify-content: center;
 
   cursor: pointer;
+`;
+
+const StyledLink = styled(Link)`
+  width: 100%;
+  height: 100%;
+
+  color: #000000;
+  text-decoration: none;
 `;
 
 const InfoWrapper = styled.div`
