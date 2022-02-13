@@ -6,7 +6,8 @@ import {
   Wrapper,
 } from '../components/commons/Components';
 import NavBar from '../components/commons/NavBar';
-import users from '../assets/users.json';
+import me from '../assets/me.json';
+import friends from '../assets/friends.json';
 import User from '../components/friends/User';
 
 const Friends = () => {
@@ -17,7 +18,12 @@ const Friends = () => {
         <Icon />
       </Header>
       <Content>
-        {users.map(({ userId, userName, statusMsg }) => (
+        <User
+          userId={me.userId}
+          userName={me.userName}
+          statusMsg={me.statusMsg}
+        />
+        {friends.map(({ userId, userName, statusMsg }) => (
           <User
             key={userId}
             userId={userId}

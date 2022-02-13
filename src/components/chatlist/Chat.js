@@ -44,7 +44,7 @@ const ProfileImg = styled.img`
 `;
 
 const TextWrapper = styled.div`
-  width: 150px;
+  width: 45%;
   height: 60px;
 
   display: flex;
@@ -53,14 +53,14 @@ const TextWrapper = styled.div`
 `;
 
 const UserName = styled.div`
-  width: 150px;
+  width: 100%;
   height: 40%;
 
   font-size: 18px;
 `;
 
 const LastMsg = styled.div`
-  width: 200px;
+  width: 100%;
   height: 60%;
 
   font-size: 12px;

@@ -9,29 +9,29 @@
   {
     "userId": "user2",
     "chats": [
-      { "userId": "user2", "message": "안뇽", "sentAt": 343434234 },
-      { "userId": "user0", "message": "안뇽안뇽", "sentAt": 343434235 }
+      { "userId": "user2", "message": "하핫", "sentAt": 343434234 },
+      { "userId": "user0", "message": "히히", "sentAt": 343434235 }
     ]
   },
   {
     "userId": "user3",
     "chats": [
-      { "userId": "user3", "message": "안뇽", "sentAt": 343434234 },
-      { "userId": "user0", "message": "안뇽안뇽", "sentAt": 343434235 }
+      { "userId": "user3", "message": "뭐", "sentAt": 343434234 },
+      { "userId": "user0", "message": "으아아아", "sentAt": 343434235 }
     ]
   },
   {
     "userId": "user4",
     "chats": [
-      { "userId": "user4", "message": "안뇽", "sentAt": 343434234 },
-      { "userId": "user0", "message": "안뇽안뇽", "sentAt": 343434235 }
+      { "userId": "user4", "message": "잘래", "sentAt": 343434234 },
+      { "userId": "user0", "message": "자고싶다", "sentAt": 343434235 }
     ]
   },
   {
     "userId": "user5",
     "chats": [
-      { "userId": "user5", "message": "안뇽", "sentAt": 343434234 },
-      { "userId": "user0", "message": "안뇽안뇽", "sentAt": 343434235 }
+      { "userId": "user5", "message": "후후", "sentAt": 343434234 },
+      { "userId": "user0", "message": "내가 짱이야!", "sentAt": 343434235 }
     ]
   }
 ]

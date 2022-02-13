@@ -6,7 +6,8 @@ import {
 } from '../components/commons/Components';
 import NavBar from '../components/commons/NavBar';
 
-import users from '../assets/users.json';
+import friends from '../assets/friends.json';
+import chats from '../assets/chats.json';
 import Chat from '../components/chatlist/Chat';
 
 const ChatList = () => {
@@ -16,12 +17,12 @@ const ChatList = () => {
         <HeaderTitle>Chat List</HeaderTitle>
       </Header>
       <Content>
-        {users.map(({ userId, userName }) => (
+        {friends.map(({ userId, userName }, i) => (
           <Chat
             key={userId}
             userId={userId}
             userName={userName}
-            lastMsg={'안뇽안뇽'}
+            lastMsg={chats[i].chats[0].message}
           />
         ))}
       </Content>
