@@ -3,8 +3,11 @@ import {
   Header,
   HeaderTitle,
   Wrapper,
-} from "../components/commons/Components";
-import NavBar from "../components/commons/NavBar";
+} from '../components/commons/Components';
+import NavBar from '../components/commons/NavBar';
+
+import users from '../assets/users.json';
+import Chat from '../components/chatlist/Chat';
 
 const ChatList = () => {
   return (
@@ -12,7 +15,16 @@ const ChatList = () => {
       <Header>
         <HeaderTitle>Chat List</HeaderTitle>
       </Header>
-      <Content></Content>
+      <Content>
+        {users.map(({ userId, userName }) => (
+          <Chat
+            key={userId}
+            userId={userId}
+            userName={userName}
+            lastMsg={'안뇽안뇽'}
+          />
+        ))}
+      </Content>
       <NavBar />
     </Wrapper>
   );

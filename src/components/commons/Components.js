@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   width: 350px;
@@ -31,7 +31,7 @@ export const HeaderTitle = styled.div`
 
   display: flex;
   align-items: center;
-  font-size: 32px;
+  font-size: 28px;
 
   padding-left: 5%;
 `;
@@ -44,6 +44,19 @@ export const Icon = styled.div`
 export const Content = styled.section`
   width: 100%;
   height: 75%;
+
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #e2e2e2;
+    background-clip: padding-box;
+    border-radius: 20px;
+    border: 8px solid transparent;
+  }
 `;
 
 export const Bottom = styled.section`

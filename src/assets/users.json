@@ -1,8 +1,32 @@
 [
-  { "userId": "user0", "userName": "corinthionia", "statusMsg": "하하" },
-  { "userId": "user1", "userName": "corinthionia", "statusMsg": "하하" },
-  { "userId": "user2", "userName": "corinthionia", "statusMsg": "하하" },
-  { "userId": "user3", "userName": "corinthionia", "statusMsg": "하하" },
-  { "userId": "user4", "userName": "corinthionia", "statusMsg": "하하" },
-  { "userId": "user5", "userName": "corinthionia", "statusMsg": "하하" }
+  {
+    "userId": "user0",
+    "userName": "Corinthionia",
+    "statusMsg": "하하"
+  },
+  {
+    "userId": "user1",
+    "userName": "IU",
+    "statusMsg": "Blueming"
+  },
+  {
+    "userId": "user2",
+    "userName": "Rose",
+    "statusMsg": "Gone"
+  },
+  {
+    "userId": "user3",
+    "userName": "Beenzino",
+    "statusMsg": "Always Awake"
+  },
+  {
+    "userId": "user4",
+    "userName": "Baek Hyun",
+    "statusMsg": "Bungee"
+  },
+  {
+    "userId": "user5",
+    "userName": "Yerin",
+    "statusMsg": "0310"
+  }
 ]
