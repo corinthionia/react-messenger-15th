@@ -5,10 +5,11 @@ import {
   Icon,
   Wrapper,
 } from '../components/commons/Components';
+import UserList from '../components/commons/UserList';
 import NavBar from '../components/commons/NavBar';
+
 import me from '../assets/me.json';
 import friends from '../assets/friends.json';
-import User from '../components/friends/User';
 
 const Friends = () => {
   return (
@@ -18,17 +19,17 @@ const Friends = () => {
         <Icon />
       </Header>
       <Content>
-        <User
+        <UserList
           userId={me.userId}
           userName={me.userName}
-          statusMsg={me.statusMsg}
+          message={me.statusMsg}
         />
         {friends.map(({ userId, userName, statusMsg }) => (
-          <User
+          <UserList
             key={userId}
             userId={userId}
             userName={userName}
-            statusMsg={statusMsg}
+            message={statusMsg}
           />
         ))}
       </Content>

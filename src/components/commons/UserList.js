@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const Chat = ({ userId, userName, lastMsg }) => {
+const UserList = ({ userId, userName, message }) => {
   return (
     <Wrapper>
       <StyledLink to={`/chatroom/${userId}`}>
@@ -9,7 +9,7 @@ const Chat = ({ userId, userName, lastMsg }) => {
           <ProfileImg src={`${process.env.PUBLIC_URL}/imgs/${userId}.jpg`} />
           <TextWrapper>
             <UserName>{userName}</UserName>
-            <LastMsg>{lastMsg}</LastMsg>
+            <Message>{message}</Message>
           </TextWrapper>
         </InfoWrapper>
       </StyledLink>
@@ -18,8 +18,9 @@ const Chat = ({ userId, userName, lastMsg }) => {
 };
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 95%;
   height: 20%;
+  margin-left: 5%;
 
   display: flex;
   align-items: center;
@@ -32,7 +33,6 @@ const StyledLink = styled(Link)`
   width: 100%;
   height: 100%;
 
-  color: #000000;
   text-decoration: none;
 `;
 
@@ -47,16 +47,17 @@ const InfoWrapper = styled.div`
 `;
 
 const ProfileImg = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 
   border-radius: 50%;
   object-fit: cover;
 `;
 
 const TextWrapper = styled.div`
-  width: 45%;
+  width: 70%;
   height: 60px;
+  margin-left: 5%;
 
   display: flex;
   flex-direction: column;
@@ -67,17 +68,24 @@ const UserName = styled.div`
   width: 100%;
   height: 40%;
 
-  font-size: 18px;
+  font-size: 16px;
+  color: #343a40;
 `;
 
-const LastMsg = styled.div`
+const Message = styled.div`
   width: 100%;
   height: 60%;
 
   font-size: 12px;
+  line-height: 18px;
+  color: #868e96;
 
-  display: flex;
-  align-items: center;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 `;
 
-export default Chat;
+export default UserList;

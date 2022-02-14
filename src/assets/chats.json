@@ -2,8 +2,31 @@
   {
     "userId": "user1",
     "chats": [
-      { "userId": "user1", "message": "안뇽", "sentAt": 343434234 },
-      { "userId": "user0", "message": "안뇽안뇽", "sentAt": 343434235 }
+      {
+        "userId": "user1",
+        "message": "우리의 색은 gray and blue 엄지손가락으로 말풍선을 띄워",
+        "sentAt": 343434234
+      },
+      {
+        "userId": "user0",
+        "message": "엄지손가락으로 말풍선을 띄워",
+        "sentAt": 343434235
+      },
+      {
+        "userId": "user1",
+        "message": "띄어쓰기없이보낼게사랑인것같애",
+        "sentAt": 343434236
+      },
+      {
+        "userId": "user1",
+        "message": "백만송이 장미꽃을 나랑 피워볼래?",
+        "sentAt": 343434237
+      },
+      {
+        "userId": "user1",
+        "message": "꽃잎의 색은 우리 마음 가는 대로 칠해 시들 때도 예쁘게",
+        "sentAt": 343434238
+      }
     ]
   },
   {
@@ -16,8 +39,26 @@
   {
     "userId": "user3",
     "chats": [
-      { "userId": "user3", "message": "뭐", "sentAt": 343434234 },
-      { "userId": "user0", "message": "으아아아", "sentAt": 343434235 }
+      {
+        "userId": "user0",
+        "message": "I just wanna be the one, but to you we're already done. Tell me, why'd you have to hit and run me?",
+        "sentAt": 343434234
+      },
+      {
+        "userId": "user3",
+        "message": "Am I the story that's sad and true?",
+        "sentAt": 343434235
+      },
+      {
+        "userId": "user3",
+        "message": "You had to be the one to let me down to color me blue. ",
+        "sentAt": 343434236
+      },
+      {
+        "userId": "user0",
+        "message": "Hate to see you with someone new. I'll put a curse on her and you. Ain't no looking back, now you're dead and gone. My love is gone too.",
+        "sentAt": 343434237
+      }
     ]
   },
   {
