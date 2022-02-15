@@ -5,7 +5,10 @@ export const Wrapper = styled.div`
   height: 700px;
 
   border: 1px solid #e2e2e2;
-  margin-top: 25px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 10%;
+  }
 
   @media screen and (max-width: 768px) {
     width: 100vw;
@@ -60,14 +63,15 @@ export const Content = styled.section`
 `;
 
 export const Bottom = styled.section`
-  width: 80%;
+  width: 100%;
   height: 10%;
 
-  padding: 0 10%;
+  // padding: 0 10%;
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
 
   border-top: 1px solid #e2e2e2;
 `;

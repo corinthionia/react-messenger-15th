@@ -1,16 +1,16 @@
-import {
-  Bottom,
-  Content,
-  Header,
-  Wrapper,
-} from "../components/commons/Components";
+import Chats from '../components/chatroom/Chats';
+import InputForm from '../components/chatroom/InputForm';
+import ChatRoomHeader from '../components/chatroom/ChatRoomHeader';
+import { Wrapper, Content } from '../components/commons/Components';
 
 const ChatRoom = () => {
   return (
     <Wrapper>
-      <Header></Header>
-      <Content></Content>
-      <Bottom />
+      <ChatRoomHeader />
+      <Content>
+        <Chats />
+      </Content>
+      <InputForm />
     </Wrapper>
   );
 };
