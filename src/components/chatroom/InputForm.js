@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import useInput from '../../hooks/useInput';
 import { Bottom } from '../commons/Components';
 
-const InputForm = () => {
+const InputForm = ({ currentUserId, chatList, setChatList }) => {
   const { userId } = useParams();
-
   const [inputText, handleInputChange] = useInput('');
 
   const handleAddNewMsg = (e) => {
@@ -13,26 +12,40 @@ const InputForm = () => {
 
     if (inputText) {
       const msg = {
-        userId: userId,
+        userId: currentUserId,
         message: inputText,
         sentAt: Date.now(),
-        isDoubleClicked: false,
       };
-    }
 
-    console.log(Date.now());
+      setChatList({ userId: userId, chats: [...chatList.chats, msg] });
+    } else {
+      alert('Please enter a message');
+    }
   };
 
   return (
     <Bottom>
-      <AddBtn type="button">😀</AddBtn>
-      <Input />
-      <AddBtn type="button" onClick={handleAddNewMsg}>
-        ➕
-      </AddBtn>
+      <Form>
+        <Button type="button">😀</Button>
+        <Input
+          value={inputText}
+          onChange={handleInputChange}
+          placeholder="Message..."
+        />
+        <Button onClick={handleAddNewMsg}>➕</Button>
+      </Form>
     </Bottom>
   );
 };
+
+const Form = styled.form`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+`;
 
 const Input = styled.input`
   width: 60%;
@@ -46,7 +59,7 @@ const Input = styled.input`
   border-radius: 12px;
 `;
 
-const AddBtn = styled.button`
+const Button = styled.button`
   width: 10%;
   height: 50%;
 
