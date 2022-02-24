@@ -26,7 +26,7 @@ const Setting = () => {
   return (
     <Wrapper>
       <Header>
-        <HeaderTitle>⚙️ Setting</HeaderTitle>
+        <HeaderTitle>Setting</HeaderTitle>
       </Header>
       <Content>
         {settingMenu.map((menu) => (

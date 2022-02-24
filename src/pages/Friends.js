@@ -15,7 +15,7 @@ const Friends = () => {
   return (
     <Wrapper>
       <Header>
-        <HeaderTitle>👥 Friends</HeaderTitle>
+        <HeaderTitle>Friends</HeaderTitle>
         <Icon />
       </Header>
       <Content>
