@@ -57,7 +57,7 @@ const ProfileWrapper = styled.div`
 `;
 
 const TextWrapper = styled.div`
-  width: 50%;
+  width: 56%;
   height: 75%;
 
   display: flex;
