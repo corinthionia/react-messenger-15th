@@ -3,14 +3,14 @@ import {
   Header,
   HeaderTitle,
   Wrapper,
-} from "../components/commons/Components";
-import NavBar from "../components/commons/NavBar";
+} from '../components/commons/Components';
+import NavBar from '../components/commons/NavBar';
 
 const Setting = () => {
   return (
     <Wrapper>
       <Header>
-        <HeaderTitle>Setting</HeaderTitle>
+        <HeaderTitle>⚙️ Setting</HeaderTitle>
       </Header>
       <Content></Content>
       <NavBar />

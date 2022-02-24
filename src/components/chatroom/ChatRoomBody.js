@@ -2,7 +2,6 @@ import { useParams } from 'react-router';
 import styled from 'styled-components';
 import me from '../../assets/me.json';
 import friends from '../../assets/friends.json';
-import { useEffect, useRef } from 'react';
 
 const ChatRoomBody = ({ chatList }) => {
   const { userId } = useParams();

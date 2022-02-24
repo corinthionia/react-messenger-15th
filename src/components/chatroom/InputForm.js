@@ -31,6 +31,7 @@ const InputForm = ({ currentUserId, chatList, setChatList }) => {
           value={inputText}
           onChange={handleInputChange}
           placeholder="Message..."
+          spellCheck={false}
         />
         <Button onClick={handleAddNewMsg}>➕</Button>
       </Form>

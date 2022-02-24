@@ -14,7 +14,7 @@ const ChatList = () => {
   return (
     <Wrapper>
       <Header>
-        <HeaderTitle>Messages</HeaderTitle>
+        <HeaderTitle>💌 Messages</HeaderTitle>
       </Header>
       <Content>
         {friends.map(({ userId, userName }, i) => (
