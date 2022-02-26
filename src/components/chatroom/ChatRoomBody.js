@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import me from '../../assets/me.json';
 import friends from '../../assets/friends.json';
 
@@ -41,8 +41,8 @@ const ChatWrapper = styled.div`
   margin: 4%;
 
   display: flex;
-  flex-direction: ${(props) =>
-    props.sender === 'user0' ? 'row-reverse' : 'row'};
+  flex-direction: ${({ sender }) =>
+    sender === 'user0' ? 'row-reverse' : 'row'};
   justify-content: space-between;
 `;
 
@@ -68,16 +68,16 @@ const UserName = styled.div`
   color: #343a40;
 
   display: flex;
-  flex-direction: ${(props) =>
-    props.sender === 'user0' ? 'row-reverse' : 'row'};
+  flex-direction: ${({ sender }) =>
+    sender === 'user0' ? 'row-reverse' : 'row'};
 `;
 
 const ChatInfoWrapper = styled.div`
   width: 100%;
 
   display: flex;
-  flex-direction: ${(props) =>
-    props.sender === 'user0' ? 'row-reverse' : 'row'};
+  flex-direction: ${({ sender }) =>
+    sender === 'user0' ? 'row-reverse' : 'row'};
 `;
 
 const Bubble = styled.div`
@@ -88,14 +88,21 @@ const Bubble = styled.div`
   line-height: 18px;
 
   display: flex;
-  flex-direction: ${(props) =>
-    props.sender === 'user0' ? 'row-reverse' : 'row'};
 
-  color: ${({ sender }) => (sender === 'user0' ? '#ffffff' : '#000000')};
-  background: ${({ sender }) => (sender === 'user0' ? '#1986fc' : '#f1f1f3')};
-
-  border-radius: ${({ sender }) =>
-    sender === 'user0' ? '12px 1px 12px 12px' : '1px 12px 12px 12px'};
+  ${({ sender }) =>
+    sender === 'user0'
+      ? css`
+          flex-direction: row-reverse;
+          color: #ffffff;
+          background: #1986fc;
+          border-radius: 12px 1px 12px 12px;
+        `
+      : css`
+          flex-direction: 'row';
+          color: #000000;
+          background: #f1f1f3;
+          border-radius: 1px 12px 12px 12px;
+        `}
 `;
 
 const Time = styled.div`
