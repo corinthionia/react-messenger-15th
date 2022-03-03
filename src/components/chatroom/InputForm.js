@@ -5,7 +5,7 @@ import { Bottom } from '../commons/Components';
 
 const InputForm = ({ currentUserId, chatList, setChatList }) => {
   const { userId } = useParams();
-  const [inputText, handleInputChange] = useInput('');
+  const [inputText, handleInputChange, reset] = useInput('');
 
   const handleAddNewMsg = (e) => {
     e.preventDefault();
@@ -18,6 +18,7 @@ const InputForm = ({ currentUserId, chatList, setChatList }) => {
       };
 
       setChatList({ userId: userId, chats: [...chatList.chats, msg] });
+      reset();
     } else {
       alert('Please enter a message');
     }
