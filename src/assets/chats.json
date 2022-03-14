@@ -5,22 +5,26 @@
       {
         "userId": "user1",
         "message": "우리의 색은 gray and blue 엄지손가락으로 말풍선을 띄워",
-        "sentAt": 1644809969387
+        "sentAt": 1644809969387,
+        "isDoubleClicked": false
       },
       {
         "userId": "user0",
         "message": "띄어쓰기없이보낼게사랑인것같애",
-        "sentAt": 1644809969389
+        "sentAt": 1644809969389,
+        "isDoubleClicked": false
       },
       {
         "userId": "user0",
         "message": "백만 송이 장미꽃을 나랑 피워 볼래?",
-        "sentAt": 1644809969390
+        "sentAt": 1644809969390,
+        "isDoubleClicked": false
       },
       {
         "userId": "user1",
         "message": "꽃잎의 색은 우리 마음 가는 대로 칠해 시들 때도 예쁘게",
-        "sentAt": 1644809969391
+        "sentAt": 1644809969391,
+        "isDoubleClicked": false
       }
     ]
   },

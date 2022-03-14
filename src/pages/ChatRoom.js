@@ -27,7 +27,7 @@ const ChatRoom = () => {
         setCurrentUserId={setCurrentUserId}
       />
       <Content ref={scrollRef}>
-        <ChatRoomBody chatList={chatList} />
+        <ChatRoomBody chatList={chatList} setChatList={setChatList} />
       </Content>
       <InputForm
         currentUserId={currentUserId}
