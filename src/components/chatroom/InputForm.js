@@ -5,7 +5,7 @@ import { Bottom } from '../commons/Components';
 
 const InputForm = ({ currentUserId, chatList, setChatList }) => {
   const { userId } = useParams();
-  const [inputText, handleInputChange, reset] = useInput('');
+  const { inputText, handleInputChange, reset } = useInput('');
 
   const handleAddNewMsg = (e) => {
     e.preventDefault();
