@@ -19,11 +19,6 @@ const Friends = () => {
         <Icon />
       </Header>
       <Content>
-        <UserList
-          userId={me.userId}
-          userName={me.userName}
-          message={me.statusMsg}
-        />
         {friends.map(({ userId, userName, statusMsg }) => (
           <UserList
             key={userId}
