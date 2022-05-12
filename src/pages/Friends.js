@@ -67,7 +67,7 @@ const SearchWrapper = styled.section`
 `;
 
 const Input = styled.input`
-  width: 60%;
+  width: 75%;
   height: 50%;
   padding: 0 4%;
 

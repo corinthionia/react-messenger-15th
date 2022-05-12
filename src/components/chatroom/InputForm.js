@@ -24,9 +24,7 @@ const InputForm = ({ currentUserId, chatList, setChatList }) => {
     }
   };
 
-  const handleHeartClick = (e) => {
-    e.preventDefault();
-
+  const handleHeartClick = () => {
     const heartMsg = {
       userId: currentUserId,
       message: '❤️',
@@ -39,7 +37,9 @@ const InputForm = ({ currentUserId, chatList, setChatList }) => {
   return (
     <Bottom>
       <Form>
-        <Button onClick={handleHeartClick}>💌</Button>
+        <Button type="button" onClick={handleHeartClick}>
+          💌
+        </Button>
         <Input
           value={inputText}
           onChange={handleInputChange}

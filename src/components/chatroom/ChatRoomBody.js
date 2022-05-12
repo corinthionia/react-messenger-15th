@@ -4,20 +4,10 @@ import me from '../../assets/me.json';
 import friends from '../../assets/friends.json';
 import { GetTime } from '../../utils/GetTime';
 
-const ChatRoomBody = ({ chatList, setChatList }) => {
+const ChatRoomBody = ({ chatList }) => {
   const { userId } = useParams();
   const userName = friends.filter((friend) => friend.userId === userId)[0]
     .userName;
-
-  // const handleDoubleClick = (e) => {
-  //   const newList = chatList.chats.map((chat) =>
-  //     chat.sentAt === parseInt(e.target.id)
-  //       ? { ...chat, isDoubleClicked: !chat.isDoubleClicked }
-  //       : chat
-  //   );
-
-  //   setChatList(() => newList);
-  // };
 
   return (
     <Wrapper>
@@ -29,13 +19,7 @@ const ChatRoomBody = ({ chatList, setChatList }) => {
               {userId === 'user0' ? me.userName : userName}
             </UserName>
             <ChatInfoWrapper sender={userId}>
-              <Bubble
-                // id={sentAt}
-                // onDoubleClick={handleDoubleClick}
-                sender={userId}
-              >
-                {message}
-              </Bubble>
+              <Bubble sender={userId}>{message}</Bubble>
               <Time>{GetTime(sentAt)}</Time>
             </ChatInfoWrapper>
           </TextWrapper>
