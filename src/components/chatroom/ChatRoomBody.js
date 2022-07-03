@@ -2,7 +2,7 @@ import { useParams } from 'react-router';
 import styled, { css } from 'styled-components';
 import me from '../../assets/me.json';
 import friends from '../../assets/friends.json';
-import { GetTime } from '../../utils/GetTime';
+import { getTime } from '../../utils/GetTime';
 
 const ChatRoomBody = ({ chatList }) => {
   const { userId } = useParams();
@@ -20,7 +20,7 @@ const ChatRoomBody = ({ chatList }) => {
             </UserName>
             <ChatInfoWrapper sender={userId}>
               <Bubble sender={userId}>{message}</Bubble>
-              <Time>{GetTime(sentAt)}</Time>
+              <Time>{getTime(sentAt)}</Time>
             </ChatInfoWrapper>
           </TextWrapper>
         </ChatWrapper>

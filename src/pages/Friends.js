@@ -20,8 +20,6 @@ const Friends = () => {
     (friend) => inputText && friend.userName.includes(inputText)
   );
 
-  console.log(results);
-
   return (
     <Wrapper>
       <Header>

@@ -49,9 +49,7 @@ const MenuWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 `;
 
 const Icon = styled.div`

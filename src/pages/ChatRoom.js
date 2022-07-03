@@ -1,24 +1,24 @@
 import { useParams } from 'react-router';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useContext } from 'react';
 import { Wrapper, Content } from '../components/commons/Components';
 import ChatRoomHeader from '../components/chatroom/ChatRoomHeader';
 import ChatRoomBody from '../components/chatroom/ChatRoomBody';
 import InputForm from '../components/chatroom/InputForm';
-
-import chats from '../assets/chats.json';
+import { ChatListContext } from '../contexts/ChatListContext';
 
 const ChatRoom = () => {
   const { userId } = useParams();
   const [currentUserId, setCurrentUserId] = useState(userId);
 
-  const filteredChats = chats.filter((user) => user.userId === userId);
-  const [chatList, setChatList] = useState(filteredChats[0]);
+  const { chatList } = useContext(ChatListContext);
+  const filteredChats = chatList.filter((user) => user.userId === userId);
+  const [filteredChatList, setFilteredChatList] = useState(filteredChats[0]);
 
   const scrollRef = useRef();
 
   useEffect(() => {
     scrollRef.current.scrollTo(0, scrollRef.current.scrollHeight);
-  }, [chatList]);
+  }, [filteredChatList]);
 
   return (
     <Wrapper>
@@ -27,12 +27,15 @@ const ChatRoom = () => {
         setCurrentUserId={setCurrentUserId}
       />
       <Content ref={scrollRef}>
-        <ChatRoomBody chatList={chatList} setChatList={setChatList} />
+        <ChatRoomBody
+          chatList={filteredChatList}
+          setChatList={setFilteredChatList}
+        />
       </Content>
       <InputForm
         currentUserId={currentUserId}
-        chatList={chatList}
-        setChatList={setChatList}
+        chatList={filteredChatList}
+        setChatList={setFilteredChatList}
       />
     </Wrapper>
   );

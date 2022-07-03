@@ -80,7 +80,6 @@ const Message = styled.div`
   line-height: 18px;
   color: #868e96;
 
-  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;

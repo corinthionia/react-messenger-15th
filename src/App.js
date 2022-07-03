@@ -5,15 +5,9 @@ import Friends from './pages/Friends';
 import ChatList from './pages/ChatList';
 import ChatRoom from './pages/ChatRoom';
 import Setting from './pages/Setting';
+import { setScreenSize } from './utils/SetScreenSize';
 
 function App() {
-  function setScreenSize() {
-    document.documentElement.style.setProperty(
-      '--vh',
-      `${window.innerHeight * 0.01}px`
-    );
-  }
-
   useEffect(() => {
     setScreenSize();
   });
