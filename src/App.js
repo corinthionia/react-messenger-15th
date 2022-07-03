@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { Routes, Route } from 'react-router';
 
 import Friends from './pages/Friends';
 import ChatList from './pages/ChatList';
 import ChatRoom from './pages/ChatRoom';
 import Setting from './pages/Setting';
-import { setScreenSize } from './utils/SetScreenSize';
+// import { setScreenSize } from './utils/SetScreenSize';
 
 function App() {
-  useEffect(() => {
-    setScreenSize();
-  });
+  // useEffect(() => {
+  //   setScreenSize();
+  // });
 
   return (
     <>
